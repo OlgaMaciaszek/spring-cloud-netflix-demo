@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+logging:
+  level:
+    org.springframework: debug
+server:
+  port: 8082

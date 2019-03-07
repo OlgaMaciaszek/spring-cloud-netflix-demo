@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: card-service
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+logging:
+  level:
+    org.springframework: debug
+server:
+  port: 8080

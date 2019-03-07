@@ -1,0 +1,9 @@
+{
+  "user": {
+    "name": "Mary",
+    "surname": "Smith",
+    "idNo": "ZXC123",
+    "dateOfBirth": "1984-11-03"
+  },
+  "cardCapacity": 111
+}
