@@ -1,11 +1,9 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -21,15 +19,11 @@ public class VerificationServiceClient {
 	}
 
 	public ResponseEntity<VerificationResult> verify(VerificationApplication verificationApplication) {
-		return restTemplate.getForEntity("http://fraud-verifier/cards/verify",
-				VerificationResult.class,
-				createParameters(verificationApplication));
-	}
-
-	private Map<String, Object> createParameters(VerificationApplication verificationApplication) {
-		Map<String, Object> parameters = new HashMap<>();
-		parameters.put("userId", verificationApplication.getUserId());
-		parameters.put("cardCapacity", verificationApplication.getCardCapacity());
-		return parameters;
+		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
+				.fromHttpUrl("http://fraud-verifier/cards/verify")
+				.queryParam("uuid", verificationApplication.getUserId())
+				.queryParam("cardCapacity", verificationApplication.getCardCapacity());
+		return restTemplate.getForEntity(uriComponentsBuilder.toUriString(),
+				VerificationResult.class);
 	}
 }

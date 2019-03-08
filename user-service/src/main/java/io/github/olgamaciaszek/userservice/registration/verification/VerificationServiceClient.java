@@ -11,6 +11,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -31,15 +32,11 @@ public class VerificationServiceClient {
 		List<ServiceInstance> instances = discoveryClient.getInstances("proxy");
 		ServiceInstance instance = instances.stream().findAny()
 				.orElseThrow(() -> new IllegalStateException("No zuul-proxy instance available"));
-		return restTemplate.getForObject(instance.getUri().toString() + "/fraud-verifier",
-				VerificationResult.class,
-				createParameters(userUuid, userAge));
-	}
-
-	private Map<String, Object> createParameters(UUID userUuid, int userAge) {
-		Map<String, Object> parameters = new HashMap<>();
-		parameters.put("uuid",userUuid);
-		parameters.put("age", userAge);
-		return parameters;
+		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
+				.fromHttpUrl(instance.getUri().toString() + "/fraud-verifier/users/verify")
+				.queryParam("uuid",userUuid)
+				.queryParam("age", userAge);
+		return restTemplate.getForObject(uriComponentsBuilder.toUriString(),
+				VerificationResult.class);
 	}
 }

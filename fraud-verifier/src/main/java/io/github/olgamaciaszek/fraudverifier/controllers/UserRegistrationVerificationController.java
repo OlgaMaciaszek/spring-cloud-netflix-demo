@@ -1,12 +1,14 @@
 package io.github.olgamaciaszek.fraudverifier.controllers;
 
+import java.util.UUID;
+
 import io.github.olgamaciaszek.fraudverifier.VerificationResult;
-import io.github.olgamaciaszek.fraudverifier.user.UserDto;
 import io.github.olgamaciaszek.fraudverifier.user.UserRegistrationVerificationService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,9 +25,10 @@ public class UserRegistrationVerificationController {
 	}
 
 	@GetMapping("/verify")
-	public ResponseEntity<VerificationResult> verifyUser(UserDto userDto) {
+	public ResponseEntity<VerificationResult> verifyUser(@RequestParam("uuid") UUID uuid,
+			@RequestParam("age") int age) {
 		VerificationResult verificationResult = userRegistrationVerificationService
-				.verifyUser(userDto);
+				.verifyUser(uuid, age);
 		return ResponseEntity.ok(verificationResult);
 	}
 

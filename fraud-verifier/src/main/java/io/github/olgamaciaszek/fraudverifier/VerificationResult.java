@@ -15,12 +15,22 @@ public class VerificationResult {
 		this.status = status;
 	}
 
+	public VerificationResult(){}
+
 	public static VerificationResult passed(UUID userId) {
 		return new VerificationResult(userId, Status.VERIFICATION_PASSED);
 	}
 
 	public static VerificationResult failed(UUID userId) {
 		return new VerificationResult(userId, Status.VERIFICATION_FAILED);
+	}
+
+	public UUID getUserId() {
+		return userId;
+	}
+
+	public Status getStatus() {
+		return status;
 	}
 
 	enum Status {

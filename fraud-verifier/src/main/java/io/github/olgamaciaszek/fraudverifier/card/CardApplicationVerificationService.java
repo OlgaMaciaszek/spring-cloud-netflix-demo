@@ -1,6 +1,7 @@
 package io.github.olgamaciaszek.fraudverifier.card;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 import io.github.olgamaciaszek.fraudverifier.VerificationResult;
 
@@ -14,12 +15,12 @@ public class CardApplicationVerificationService {
 
 	private static final BigDecimal LIMIT = new BigDecimal("9000");
 
-	public VerificationResult verify(CardVerificationDto cardVerificationDto) {
-		if (isOutOfRange(cardVerificationDto.cardCapacity)) {
-			return VerificationResult.failed(cardVerificationDto.userId);
+	public VerificationResult verify(UUID uuid, BigDecimal cardCapacity) {
+		if (isOutOfRange(cardCapacity)) {
+			return VerificationResult.failed(uuid);
 		}
 		else {
-			return VerificationResult.passed(cardVerificationDto.userId);
+			return VerificationResult.passed(uuid);
 		}
 	}
 

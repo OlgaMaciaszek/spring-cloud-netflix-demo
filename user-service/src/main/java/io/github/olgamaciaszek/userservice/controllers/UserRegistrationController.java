@@ -31,6 +31,6 @@ public class UserRegistrationController {
 		User user = userRegistrationService.registerUser(userDto);
 		UriComponents uriComponents = uriComponentsBuilder.path("/users/{uuid}")
 				.buildAndExpand(user.getUuid());
-		return ResponseEntity.created(uriComponents.toUri()).build();
+		return ResponseEntity.created(uriComponents.toUri()).body(user);
 	}
 }

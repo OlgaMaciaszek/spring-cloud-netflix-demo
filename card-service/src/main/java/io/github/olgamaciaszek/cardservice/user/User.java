@@ -7,13 +7,17 @@ import java.util.UUID;
  */
 public class User {
 
-	private final UUID uuid;
+	private UUID uuid;
 
-	private final Status status;
+	private Status status;
 
 	User(UUID uuid, Status status) {
 		this.uuid = uuid;
 		this.status = status;
+	}
+
+	public User(){
+
 	}
 
 	public UUID getUuid() {
