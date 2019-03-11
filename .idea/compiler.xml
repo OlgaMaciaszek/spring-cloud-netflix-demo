@@ -16,6 +16,16 @@
         <module name="zuul-proxy" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="card-service" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="fraud-verifier" target="1.8" />
+      <module name="ignored-service" target="1.8" />
+      <module name="spring-cloud-netflix-demo" target="1.5" />
+      <module name="turbine" target="1.8" />
+      <module name="user-service" target="8" />
+      <module name="zuul-proxy" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
