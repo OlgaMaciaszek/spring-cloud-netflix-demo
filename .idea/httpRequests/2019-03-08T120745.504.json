@@ -1,6 +1,0 @@
-{
-  "timestamp": "2019-03-08T11:07:45.698+0000",
-  "status": 504,
-  "error": "Gateway Timeout",
-  "message": "com.netflix.zuul.exception.ZuulException: Hystrix Readed time out"
-}
