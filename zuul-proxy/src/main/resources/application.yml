@@ -11,10 +11,6 @@ eureka:
 logging:
   level:
     org.springframework: debug
-turbine:
-  aggregator:
-    clusterConfig: proxy-hystrix-aggregate
-    appConfig: proxy-hystrix-aggregate
 
 management:
   endpoints:
@@ -26,5 +22,10 @@ management:
 #    default:
 #      circuitBreaker:
 #        enabled: false
+
 zuul:
-  ignored-services: 'ignored-service'
+  ignoredServices: 'ignored'
+  routes:
+    allowed:
+      serviceId: ignored
+      path: /test/allowed

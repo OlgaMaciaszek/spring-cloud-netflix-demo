@@ -3,9 +3,13 @@ server:
 
 spring:
   application:
-    name: ignored-service
+    name: ignored
 
 eureka:
   client:
     healthcheck:
       enabled: true
+
+logging:
+  level:
+    org.springframework: debug

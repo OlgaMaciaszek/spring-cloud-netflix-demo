@@ -16,4 +16,9 @@ public class IgnoredServiceController {
 		return "Ignored service called";
 	}
 
+	@GetMapping("/allowed")
+	public String allowed() {
+		return "Allowed endpoint called";
+	}
+
 }
