@@ -1,5 +1,8 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
+import io.github.olgamaciaszek.cardservice.application.config.CustomRibbonConfiguration;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -8,7 +11,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 /**
  * @author Olga Maciaszek-Sharma
  */
-//@RibbonClient(name = "card-client")  TODO: add rule config?
+@RibbonClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
 @Component
 public class VerificationServiceClient {
 

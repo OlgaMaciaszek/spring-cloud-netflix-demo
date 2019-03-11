@@ -1,9 +1,22 @@
+# Sample Credit Card application eco-system
+
+- new card applications registered via `card-service`
+- user registered via `user-service`
+- `fraud-service` called by `card-service` and `user-service` to verify 
+card applications and new users
+- `ignored` service
+
 #Existing setup with Spring Cloud Netflix
+
+##Client side load-balancing using Ribbon
+
+- Ribbon used via `@LoadBalanced` `RestTemplate`
+- Ribbon configuration modified via `@RibbonClient`
 
 ##Apps communicating via Zuul:
 - Routes automatically resolved by name
-- Ignored services set by properties
 - Routes explicitly defined in properties
+- Ignored services set by properties
 - Integrated Hystrix
 
 ##Hystrix Circuit Breaker
