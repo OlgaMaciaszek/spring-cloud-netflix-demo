@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-03-08T11:07:02.344+0000",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Required int parameter 'age' is not present",
+  "path": "/users/verify"
+}
