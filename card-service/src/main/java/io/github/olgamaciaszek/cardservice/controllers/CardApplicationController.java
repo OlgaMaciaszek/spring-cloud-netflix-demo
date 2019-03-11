@@ -33,6 +33,7 @@ public class CardApplicationController {
 				.registerApplication(applicationDTO);
 		UriComponents uriComponents = uriComponentsBuilder.path("/applications/{uuid}")
 				.buildAndExpand(cardApplication.getUuid());
-		return ResponseEntity.created(uriComponents.toUri()).build();
+		return ResponseEntity.created(uriComponents.toUri())
+				.body(cardApplication.getApplicationResult());
 	}
 }

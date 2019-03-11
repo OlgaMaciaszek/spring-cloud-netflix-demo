@@ -11,3 +11,20 @@ eureka:
 logging:
   level:
     org.springframework: debug
+turbine:
+  aggregator:
+    clusterConfig: proxy-hystrix-aggregate
+    appConfig: proxy-hystrix-aggregate
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        enabled: false
+zuul:
+  ignored-services: 'ignored-service'

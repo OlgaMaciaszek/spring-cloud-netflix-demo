@@ -36,11 +36,12 @@ public class CardApplicationService {
 		VerificationResult verificationResult = verificationServiceClient
 				.verify(new VerificationApplication(application.getUuid(),
 						application.getCardCapacity())).getBody();
-		if (!VerificationResult.Status.VERIFICATION_PASSED.equals(verificationResult.status)) {
+		if (!VerificationResult.Status.VERIFICATION_PASSED
+				.equals(verificationResult.status)) {
 			application.setApplicationResult(ApplicationResult.rejected());
 		}
 		else {
-			application.setApplicationResult(ApplicationResult.rejected());
+			application.setApplicationResult(ApplicationResult.granted());
 		}
 		return application;
 	}

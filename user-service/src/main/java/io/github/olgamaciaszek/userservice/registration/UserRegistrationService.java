@@ -37,5 +37,4 @@ public class UserRegistrationService {
 			user.setStatus(User.Status.FRAUD);
 		}
 	}
-
 }

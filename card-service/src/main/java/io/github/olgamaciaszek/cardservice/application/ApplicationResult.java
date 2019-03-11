@@ -11,6 +11,10 @@ public class ApplicationResult {
 		this.status = status;
 	}
 
+	public ApplicationResult() {
+
+	}
+
 	public static ApplicationResult granted() {
 		return new ApplicationResult(Status.GRANTED);
 	}
@@ -19,11 +23,11 @@ public class ApplicationResult {
 		return new ApplicationResult(Status.REJECTED);
 	}
 
-	Status getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	enum Status {
+	public enum Status {
 		GRANTED,
 		REJECTED
 	}

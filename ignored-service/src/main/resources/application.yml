@@ -1,0 +1,11 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: ignored-service
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true

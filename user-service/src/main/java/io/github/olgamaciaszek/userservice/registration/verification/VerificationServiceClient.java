@@ -1,11 +1,9 @@
 package io.github.olgamaciaszek.userservice.registration.verification;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
-import io.github.olgamaciaszek.userservice.model.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -28,15 +26,21 @@ public class VerificationServiceClient {
 		this.discoveryClient = discoveryClient;
 	}
 
+	@HystrixCommand(fallbackMethod = "userRejected")
 	public VerificationResult verifyNewUser(UUID userUuid, int userAge) {
 		List<ServiceInstance> instances = discoveryClient.getInstances("proxy");
 		ServiceInstance instance = instances.stream().findAny()
 				.orElseThrow(() -> new IllegalStateException("No zuul-proxy instance available"));
 		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
-				.fromHttpUrl(instance.getUri().toString() + "/fraud-verifier/users/verify")
-				.queryParam("uuid",userUuid)
+				.fromHttpUrl(instance.getUri()
+						.toString() + "/fraud-verifier/users/verify")
+				.queryParam("uuid", userUuid)
 				.queryParam("age", userAge);
 		return restTemplate.getForObject(uriComponentsBuilder.toUriString(),
 				VerificationResult.class);
+	}
+
+	public VerificationResult userRejected(UUID userUuid, int userAge) {
+		return VerificationResult.failed(userUuid);
 	}
 }
