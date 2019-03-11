@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/card-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fraud-verifier" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ignored-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/turbine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul-proxy" charset="UTF-8" />
   </component>

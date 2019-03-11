@@ -1,91 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70533059-d770-4c7e-ae54-554253c993c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/CardServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/UserServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/test/java/io/github/olgamaciaszek/cardservice/CardServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cardApplication.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/io/github/olgamaciaszek/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/io/github/olgamaciaszek/eurekaserver/EurekaServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/FraudVerifierApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardApplicationVerificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardVerificationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserRegistrationVerificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud-verifier/src/test/java/io/github/olgamaciaszek/fraudverifier/FraudVerifierApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/UserServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/io/github/olgamaciaszek/userservice/UserServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/src/main/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-proxy/src/test/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplicationTests.java" afterDir="false" />
+    <list default="true" id="70533059-d770-4c7e-ae54-554253c993c6" name="Default Changelist" comment="Add turbine.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,65 +14,86 @@
     <ignored path="$PROJECT_DIR$/fraud-verifier/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
     <ignored path="$PROJECT_DIR$/user-service/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <ignored path="$PROJECT_DIR$/ignored-service/target/" />
+    <ignored path="$PROJECT_DIR$/turbine/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-493835157">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="14" />
-          <entry key="cmd" value="1" />
-          <entry key="java" value="153" />
+          <entry key="class" value="18" />
+          <entry key="cmd" value="3" />
+          <entry key="gitignore" value="3" />
+          <entry key="java" value="239" />
           <entry key="json" value="1" />
-          <entry key="properties" value="5" />
-          <entry key="xml" value="25" />
-          <entry key="yml" value="25" />
+          <entry key="properties" value="7" />
+          <entry key="xml" value="41" />
+          <entry key="yml" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="14" />
-          <entry key="JAVA" value="153" />
+          <entry key="CLASS" value="18" />
+          <entry key="JAVA" value="239" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="5" />
-          <entry key="XML" value="25" />
-          <entry key="YAML" value="25" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Properties" value="7" />
+          <entry key="XML" value="41" />
+          <entry key="YAML" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="91" />
-          <entry key="java" value="5448" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="6265" />
           <entry key="json" value="120" />
-          <entry key="xml" value="50" />
-          <entry key="yml" value="274" />
+          <entry key="txt" value="48" />
+          <entry key="xml" value="78" />
+          <entry key="yml" value="643" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="5448" />
+          <entry key="JAVA" value="6265" />
           <entry key="JSON" value="120" />
-          <entry key="PLAIN_TEXT" value="91" />
-          <entry key="XML" value="50" />
-          <entry key="YAML" value="274" />
+          <entry key="PLAIN_TEXT" value="140" />
+          <entry key="XML" value="78" />
+          <entry key="YAML" value="643" />
         </counts>
       </usages-collector>
     </session>
@@ -160,73 +101,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java">
+        <entry file="file://$PROJECT_DIR$/turbine/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java">
+        <entry file="file://$PROJECT_DIR$/turbine/src/main/java/io/github/olgamaciaszek/turbine/TurbineApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="350">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java">
+        <entry file="file://$PROJECT_DIR$/turbine/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserRegistrationVerificationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/target/test-classes/io/github/olgamaciaszek/fraudverifier/FraudVerifierApplicationTests.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#526#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="325">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -234,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+            <state relative-caret-position="600">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -244,31 +140,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardVerificationDto.java">
+        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/card-service/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserDto.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/FraudVerifierApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="550">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -279,6 +183,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -290,7 +195,6 @@
       <find>8761</find>
       <find>eureka</find>
       <find>act</find>
-      <find>actua</find>
       <find>St</find>
       <find>String uuid</find>
       <find>eurek</find>
@@ -298,6 +202,8 @@
       <find>registry</find>
       <find>geturi</find>
       <find>iso_lo</find>
+      <find>actua</find>
+      <find>das</find>
     </findStrings>
     <replaceStrings>
       <replace>Registration</replace>
@@ -355,46 +261,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/verification/FraudVerificationService.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/UserServiceClient.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/VerificationResult.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationResult.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationResult.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/User.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/UserDto.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistryController.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationServiceClient.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registry/UserRegistryService.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/config/VerificationClientConfig.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/config/WebClientConfig.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registry/verification/VerificationServiceClient.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/application/dto/VerificationDTO.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/application/VerificationResult.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationResult.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationDTO.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/dto/VerificationDTO.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationDto.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/dto/VerificationDto.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardApplicationVerificationService.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registry/verification/UserVerificationService.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/UserVerificationService.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationResult.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/model/User.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/config/WebClientConfig.java" />
         <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationDTO.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java" />
         <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplication.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java" />
-        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/UserServiceClient.java" />
         <option value="$PROJECT_DIR$/cardApplication.json" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java" />
-        <option value="$PROJECT_DIR$/zuul-proxy/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/zuul-proxy/src/main/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.java" />
-        <option value="$PROJECT_DIR$/zuul-proxy/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/pom.xml" />
         <option value="$PROJECT_DIR$/card-service/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/fraud-verifier/pom.xml" />
@@ -402,10 +279,39 @@
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/UserRegistrationVerificationService.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/dto/CardVerificationDto.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardVerificationDto.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserDto.java" />
-        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java" />
         <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserRegistrationVerificationService.java" />
+        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java" />
+        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationResult.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationResult.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/UserServiceClient.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/User.java" />
+        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardApplicationVerificationService.java" />
+        <option value="$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationApplication.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationServiceClient.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationResult.java" />
+        <option value="$PROJECT_DIR$/ignored-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ignored-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ignored-service/src/main/java/io/github/olgamaciaszek/ignoredservice/controllers/IgnoredServiceController.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationStatus.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationResult.java" />
+        <option value="$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java" />
+        <option value="$PROJECT_DIR$/zuul-proxy/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/zuul-proxy/src/main/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.java" />
+        <option value="$PROJECT_DIR$/zuul-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/config/WebClientConfig.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/UserServiceApplication.java" />
+        <option value="$PROJECT_DIR$/turbine/src/main/java/io/github/olgamaciaszek/turbine/TurbineApplication.java" />
+        <option value="$PROJECT_DIR$/turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/turbine/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -440,13 +346,17 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -807,13 +717,6 @@
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
               <item name="fraud-verifier" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="fraud-verifier" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -871,30 +774,25 @@
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -902,7 +800,7 @@
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -911,7 +809,7 @@
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -921,7 +819,7 @@
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -932,27 +830,203 @@
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="io" type="462c0819:PsiDirectoryNode" />
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="ignoredservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="io" type="462c0819:PsiDirectoryNode" />
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="ignoredservice" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="ignored-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="turbine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
+              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
+              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -966,19 +1040,6 @@
               <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
               <item name="userservice" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="olgamaciaszek" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -1101,6 +1162,13 @@
               <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
               <item name="zuul-proxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-netflix-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-netflix-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-proxy" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1171,6 +1239,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1180,7 +1249,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551980736315" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552302945413" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1204,6 +1273,112 @@
       <recent name="io.github.olgamaciaszek.fraudverifier.verification" />
       <recent name="io.github.olgamaciaszek.fraudverifier.controllers" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8083" />
+          <option name="urlPath" value="fraud-verifier/users/verify" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4 " />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="age" />
+                <option name="value" value="34" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8083" />
+          <option name="urlPath" value="fraud-verifier/users/verify" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4 " />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4 " />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8083" />
+          <option name="urlPath" value="fraud-verifier/users/verify" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="uuid" />
+                <option name="value" value="097afe5c-3621-482b-abe8-f50eec68aed4 " />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -1262,6 +1437,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IgnoredServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ignored-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.olgamaciaszek.ignoredservice.IgnoredServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurbineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="turbine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.olgamaciaszek.turbine.TurbineApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.olgamaciaszek.userservice.UserServiceApplication" />
@@ -1299,6 +1488,8 @@
       <item itemvalue="Spring Boot.FraudVerifierApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.IgnoredServiceApplication" />
+      <item itemvalue="Spring Boot.TurbineApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -1316,17 +1507,42 @@
       <workItem from="1550414250196" duration="1892000" />
       <workItem from="1551799919545" duration="3733000" />
       <workItem from="1551870205283" duration="13801000" />
-      <workItem from="1551953720510" duration="17511000" />
+      <workItem from="1551953720510" duration="17678000" />
+      <workItem from="1552038807373" duration="15872000" />
+      <workItem from="1552293575801" duration="9214000" />
     </task>
+    <task id="LOCAL-00001" summary="Init.">
+      <created>1551980793564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551980793564</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finish main workflow.">
+      <created>1552056994998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552056994998</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add turbine.">
+      <created>1552302754690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552302754690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44880000" />
+    <option name="totallyTimeSpent" value="70133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="2560" height="1440" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16216215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1645469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1335,7 +1551,6 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" weight="0.32944834" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944834" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32944834" />
@@ -1344,14 +1559,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4118104" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4118104" />
       <window_info anchor="bottom" id="CheckStyle" order="9" weight="0.32944834" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32944834" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32944834" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32944834" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.36130536" />
+      <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.32944834" />
+      <window_info anchor="bottom" id="REST Client" order="17" weight="0.32944834" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1370,62 +1587,72 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init." />
+    <MESSAGE value="Finish main workflow." />
+    <MESSAGE value="Add turbine." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add turbine." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java</url>
-          <line>27</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java</url>
+          <url>file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java</url>
           <line>31</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/user/UserServiceClient.java</url>
-          <line>21</line>
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE-sources.jar!/org/springframework/http/converter/HttpMessageNotWritableException.java</url>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java</url>
-          <line>30</line>
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE-sources.jar!/org/springframework/http/converter/HttpMessageNotWritableException.java</url>
+          <line>44</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java</url>
+          <url>file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java</url>
           <line>29</line>
           <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>verificationServiceClient
+				.verifyNewUser(user.getUuid(), user.getAge())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>uriComponentsBuilder.toUriString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>restTemplate.getForObject(uriComponentsBuilder.toUriString(),
+				VerificationResult.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>instance.getUri().toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>discoveryClient.getServices()</expression-string>
         <language-id>JAVA</language-id>
@@ -1439,210 +1666,73 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java">
+    <entry file="file://$PROJECT_DIR$/ignored-service/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        <state relative-caret-position="550">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+    <entry file="file://$PROJECT_DIR$/fraud-verifier/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-proxy/target/classes/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignored-service/src/main/java/io/github/olgamaciaszek/ignoredservice/IgnoredServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="42" column="21" selection-start-line="39" selection-start-column="8" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignored-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        <state relative-caret-position="250">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignored-service/src/main/java/io/github/olgamaciaszek/ignoredservice/controllers/IgnoredServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/verification/VerificationServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardApplicationVerificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/VerificationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.0.RELEASE/spring-cloud-netflix-eureka-client-2.1.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="289" column="28" selection-start-line="289" selection-start-column="28" selection-end-line="289" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.8/eureka-client-1.9.8-sources.jar!/com/netflix/appinfo/InstanceInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/UserVerificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/config/WebClientConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/config/WebClientConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/current/src.zip!/java/time/format/DateTimeFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="687" column="21" selection-start-line="687" selection-start-column="21" selection-end-line="687" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cardApplication.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/UserServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/2.1.0.RELEASE/spring-cloud-commons-2.1.0.RELEASE-sources.jar!/org/springframework/cloud/client/discovery/composite/CompositeDiscoveryClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1656,135 +1746,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE-sources.jar!/org/springframework/http/converter/HttpMessageNotWritableException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="268">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RELEASE/spring-cloud-netflix-zuul-2.1.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/EnableZuulProxy.java">
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/io/github/olgamaciaszek/eurekaserver/EurekaServerApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/http/converter/HttpMessageNotWritableException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="282">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-proxy/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-proxy/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-proxy/src/main/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-proxy/target/classes/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/CardServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/dto/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/config/WebClientConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="425">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/ApplicationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/controllers/CardApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/src/main/java/io/github/olgamaciaszek/cardservice/application/CardApplicationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-proxy/src/main/java/io/github/olgamaciaszek/zuulproxy/ZuulProxyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/controllers/UserRegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18.jar!/com/netflix/hystrix/contrib/javanica/annotation/HystrixCommand.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/2.1.0.RELEASE/spring-cloud-commons-2.1.0.RELEASE-sources.jar!/org/springframework/cloud/client/circuitbreaker/EnableCircuitBreaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.0.RELEASE/spring-cloud-netflix-hystrix-2.1.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/hystrix/EnableHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.0.RELEASE/spring-cloud-netflix-hystrix-2.1.0.RELEASE.jar!/org/springframework/cloud/netflix/hystrix/EnableHystrix.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/UserRegistrationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="559">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1793,8 +1904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/registration/verification/VerificationServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="548">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1808,60 +1919,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/card/CardVerificationDto.java">
+    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserRegistrationVerificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/config/WebClientConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/io/github/olgamaciaszek/userservice/UserServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignored-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-proxy/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-proxy/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/CardApplicationVerificationController.java">
+    <entry file="file://$PROJECT_DIR$/turbine/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserDto.java">
+    <entry file="file://$PROJECT_DIR$/turbine/src/main/java/io/github/olgamaciaszek/turbine/TurbineApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="350">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/turbine/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/controllers/UserRegistrationVerificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        <state relative-caret-position="600">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/src/main/java/io/github/olgamaciaszek/fraudverifier/user/UserRegistrationVerificationService.java">
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-service/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fraud-verifier/target/test-classes/io/github/olgamaciaszek/fraudverifier/FraudVerifierApplicationTests.class">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#526#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="550">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>

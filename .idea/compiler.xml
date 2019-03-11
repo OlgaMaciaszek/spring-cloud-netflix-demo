@@ -9,7 +9,9 @@
         <module name="card-service" />
         <module name="eureka-server" />
         <module name="fraud-verifier" />
+        <module name="ignored-service" />
         <module name="spring-cloud-netflix-demo" />
+        <module name="turbine" />
         <module name="user-service" />
         <module name="zuul-proxy" />
       </profile>
@@ -20,6 +22,8 @@
       <module name="card-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="fraud-verifier" options="-parameters" />
+      <module name="ignored-service" options="-parameters" />
+      <module name="turbine" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="zuul-proxy" options="-parameters" />
     </option>
