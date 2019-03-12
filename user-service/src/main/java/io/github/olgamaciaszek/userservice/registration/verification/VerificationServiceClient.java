@@ -30,7 +30,7 @@ public class VerificationServiceClient {
 	public VerificationResult verifyNewUser(UUID userUuid, int userAge) {
 		List<ServiceInstance> instances = discoveryClient.getInstances("proxy");
 		ServiceInstance instance = instances.stream().findAny()
-				.orElseThrow(() -> new IllegalStateException("No zuul-proxy instance available"));
+				.orElseThrow(() -> new IllegalStateException("No proxy instance available"));
 		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
 				.fromHttpUrl(instance.getUri()
 						.toString() + "/fraud-verifier/users/verify")

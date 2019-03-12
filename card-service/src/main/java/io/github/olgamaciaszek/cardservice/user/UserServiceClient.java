@@ -1,10 +1,10 @@
 package io.github.olgamaciaszek.cardservice.user;
 
 import io.github.olgamaciaszek.cardservice.application.CardApplicationDto;
+import reactor.core.publisher.Mono;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -12,15 +12,17 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class UserServiceClient {
 
-	private final RestTemplate restTemplate;
+	private final WebClient.Builder webClientBuilder;
 
-	UserServiceClient(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
+	UserServiceClient(WebClient.Builder webClientBuilder) {
+		this.webClientBuilder = webClientBuilder;
 	}
 
-	public ResponseEntity<User> registerUser(CardApplicationDto.User userDto) {
-		return restTemplate.postForEntity("http://user-service/registration",
-				userDto,
-				User.class);
+	public Mono<User> registerUser(CardApplicationDto.User userDto) {
+		return webClientBuilder.build()
+				.post().uri("http://user-service/registration")
+				.syncBody(userDto)
+				.retrieve()
+				.bodyToMono(User.class);
 	}
 }

@@ -18,6 +18,9 @@ public class CardApplication {
 	CardApplication(UUID uuid, User user, BigDecimal cardCapacity) {
 		this.uuid = uuid;
 		this.user = user;
+		if(!User.Status.OK.equals(user.getStatus())) {
+			applicationResult = ApplicationResult.rejected();
+		}
 		this.cardCapacity = cardCapacity;
 	}
 

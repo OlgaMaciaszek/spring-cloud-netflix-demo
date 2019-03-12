@@ -1,12 +1,11 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
 import io.github.olgamaciaszek.cardservice.application.config.CustomRibbonConfiguration;
+import reactor.core.publisher.Mono;
 
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.reactive.function.client.WebClient;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -15,18 +14,21 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Component
 public class VerificationServiceClient {
 
-	private final RestTemplate restTemplate;
+	private final WebClient.Builder webClientBuilder;
 
-	VerificationServiceClient(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
+	VerificationServiceClient(WebClient.Builder webClientBuilder) {
+		this.webClientBuilder = webClientBuilder;
 	}
 
-	public ResponseEntity<VerificationResult> verify(VerificationApplication verificationApplication) {
-		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
-				.fromHttpUrl("http://fraud-verifier/cards/verify")
-				.queryParam("uuid", verificationApplication.getUserId())
-				.queryParam("cardCapacity", verificationApplication.getCardCapacity());
-		return restTemplate.getForEntity(uriComponentsBuilder.toUriString(),
-				VerificationResult.class);
+	public Mono<VerificationResult> verify(VerificationApplication verificationApplication) {
+		return webClientBuilder.build().get()
+				.uri(uriBuilder -> uriBuilder
+						.scheme("http")
+						.host("fraud-verifier").path("/cards/verify")
+						.queryParam("uuid", verificationApplication.getUserId())
+						.queryParam("cardCapacity", verificationApplication
+								.getCardCapacity())
+						.build())
+				.retrieve().bodyToMono(VerificationResult.class);
 	}
 }

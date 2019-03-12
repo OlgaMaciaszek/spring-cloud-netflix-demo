@@ -6,6 +6,13 @@
 card applications and new users
 - `ignored` service
 
+After running all the apps execute POST at `localhost:8080/application` passing 
+`cardApplication.json` as body.
+
+```bash
+http POST localhost:8080/application < cardApplication.json
+```
+
 #Existing setup with Spring Cloud Netflix
 
 ##Client side load-balancing using Ribbon
