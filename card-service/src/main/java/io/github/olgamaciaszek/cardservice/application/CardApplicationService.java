@@ -17,11 +17,10 @@ import org.springframework.stereotype.Service;
  * @author Olga Maciaszek-Sharma
  */
 @Service
-public class CardApplicationService  {
+public class CardApplicationService {
 
 	private final UserServiceClient userServiceClient;
 	private final VerificationServiceClient verificationServiceClient;
-	private final List<ApplicationResult> results = new ArrayList<>();
 
 	public CardApplicationService(UserServiceClient userServiceClient,
 			VerificationServiceClient verificationServiceClient) {
