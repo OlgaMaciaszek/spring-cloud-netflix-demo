@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.zuulproxy;
+package io.github.olgamaciaszek.proxy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ZuulProxyApplicationTests {
+public class GatewayProxyApplicationTests {
 
 	@Test
 	public void contextLoads() {

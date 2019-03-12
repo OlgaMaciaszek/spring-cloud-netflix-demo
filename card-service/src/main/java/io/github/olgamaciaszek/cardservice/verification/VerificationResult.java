@@ -15,7 +15,7 @@ public class VerificationResult {
 		this.status = status;
 	}
 
-	public VerificationResult(){
+	public VerificationResult() {
 
 	}
 

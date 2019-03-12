@@ -1,0 +1,42 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: proxy
+  cloud:
+    gateway:
+      routes:
+      - id: fraud
+        uri: lb://fraud-verifier
+        predicates:
+        - Path=/fraud-verifier/**
+        filters:
+        - StripPrefix=1
+        - name: Retry
+          args:
+            retries: 3
+      - id: ignored
+        uri: lb://ignored
+        predicates:
+        - Path=/ignored/test/allowed
+        filters:
+        - StripPrefix=1
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+logging:
+  level:
+    org.springframework: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        enabled: false

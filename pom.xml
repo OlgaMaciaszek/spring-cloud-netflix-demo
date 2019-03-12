@@ -9,7 +9,7 @@
 	<version>1.0-SNAPSHOT</version>
 
 	<modules>
-		<module>zuul-proxy</module>
+		<module>gateway-proxy</module>
 		<module>card-service</module>
 		<module>fraud-verifier</module>
 		<module>eureka-server</module>

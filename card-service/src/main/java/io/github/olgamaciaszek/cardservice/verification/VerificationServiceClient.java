@@ -3,14 +3,14 @@ package io.github.olgamaciaszek.cardservice.verification;
 import io.github.olgamaciaszek.cardservice.application.config.CustomRibbonConfiguration;
 import reactor.core.publisher.Mono;
 
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 /**
  * @author Olga Maciaszek-Sharma
  */
-@RibbonClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
+@LoadBalancerClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
 @Component
 public class VerificationServiceClient {
 
