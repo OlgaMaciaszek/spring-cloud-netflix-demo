@@ -1,7 +1,5 @@
 package io.github.olgamaciaszek.cardservice.application;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 import io.github.olgamaciaszek.cardservice.user.User;
