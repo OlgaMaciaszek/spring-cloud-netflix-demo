@@ -1,5 +1,6 @@
 package io.github.olgamaciaszek.cardservice.application.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,10 +14,16 @@ public class WebClientConfig {
 
 	@Bean
 	@LoadBalanced
+	@Qualifier("loadBalancedWebClient")
 	WebClient.Builder loadBalancedWebClientBuilder() {
 		return WebClient.builder();
 	}
 
+	@Bean
+	@Qualifier("webClient")
+	WebClient.Builder webClientBuilder() {
+		return WebClient.builder();
+	}
 }
 
 
