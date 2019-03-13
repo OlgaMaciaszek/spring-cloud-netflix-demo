@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.ignoredservice.controllers;
+package io.github.olgamaciaszek.ignoredservice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/test")
-public class IgnoredServiceController {
+class IgnoredServiceController {
 
 	@GetMapping
-	public String test() {
+	String test() {
 		return "Ignored service called";
 	}
 
 	@GetMapping("/allowed")
-	public String allowed() {
+	String allowed() {
 		return "Allowed endpoint called";
 	}
 

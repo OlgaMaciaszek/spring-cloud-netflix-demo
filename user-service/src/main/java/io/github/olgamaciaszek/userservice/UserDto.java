@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.userservice.dto;
+package io.github.olgamaciaszek.userservice;
 
 import java.time.LocalDate;
 

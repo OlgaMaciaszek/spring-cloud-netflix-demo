@@ -1,6 +1,6 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
-import io.github.olgamaciaszek.cardservice.application.config.CustomRibbonConfiguration;
+import io.github.olgamaciaszek.cardservice.config.CustomRibbonConfiguration;
 
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.http.ResponseEntity;

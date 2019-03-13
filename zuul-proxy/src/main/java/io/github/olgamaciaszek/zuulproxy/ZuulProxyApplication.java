@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableZuulProxy
-//@EnableTurbine //TODO
 @EnableHystrixDashboard
 public class ZuulProxyApplication {
 

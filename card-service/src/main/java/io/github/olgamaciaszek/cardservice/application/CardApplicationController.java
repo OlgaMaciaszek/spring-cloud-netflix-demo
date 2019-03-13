@@ -1,9 +1,4 @@
-package io.github.olgamaciaszek.cardservice.controllers;
-
-import io.github.olgamaciaszek.cardservice.application.ApplicationResult;
-import io.github.olgamaciaszek.cardservice.application.CardApplication;
-import io.github.olgamaciaszek.cardservice.application.CardApplicationDto;
-import io.github.olgamaciaszek.cardservice.application.CardApplicationService;
+package io.github.olgamaciaszek.cardservice.application;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
  */
 @RestController
 @RequestMapping("/application")
-public class CardApplicationController {
+class CardApplicationController {
 
 	private final CardApplicationService cardApplicationService;
 

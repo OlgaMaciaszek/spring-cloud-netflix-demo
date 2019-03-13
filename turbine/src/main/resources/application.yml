@@ -1,5 +1,5 @@
 server:
-  port: 8086
+  port: 9086
 
 applications: user-service
 

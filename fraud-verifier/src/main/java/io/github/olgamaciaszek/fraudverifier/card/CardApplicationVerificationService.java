@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
  * @author Olga Maciaszek-Sharma
  */
 @Service
-public class CardApplicationVerificationService {
+class CardApplicationVerificationService {
 
 	private static final BigDecimal LIMIT = new BigDecimal("9000");
 
-	public VerificationResult verify(UUID uuid, BigDecimal cardCapacity) {
+	VerificationResult verify(UUID uuid, BigDecimal cardCapacity) {
 		if (isOutOfRange(cardCapacity)) {
 			return VerificationResult.failed(uuid);
 		}

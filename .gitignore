@@ -23,3 +23,6 @@
 /nbdist/
 /.nb-gradle/
 /build/
+
+gateway-proxy
+bin/

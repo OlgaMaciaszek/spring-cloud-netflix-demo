@@ -9,4 +9,4 @@ logging:
   level:
     org.springframework: debug
 server:
-  port: 8080
+  port: 9080

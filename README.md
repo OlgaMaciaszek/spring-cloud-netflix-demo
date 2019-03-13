@@ -1,10 +1,10 @@
 # Sample Credit Card application eco-system
 
-After running all the apps execute POST at `localhost:8080/application` passing 
+After running all the apps execute POST at `localhost:9080/application` passing 
 `cardApplication.json` as body.
 
 ```bash
-http POST localhost:8080/application < cardApplication.json
+http POST localhost:9080/application < cardApplication.json
 ```
 
 - new card applications registered via `card-service`
@@ -14,11 +14,11 @@ card applications and new users
 
 
 ```bash
-http GET olgahost:8083/ignored/test
+http GET olgahost:9083/ignored/test
 ```
 
 ```bash
-http GET olgahost:8083/ignored/test/allowed
+http GET olgahost:9083/ignored/test/allowed
 ```
 
 - `ignored` service with `test` endpoint returning 404 via Proxy and `/test/allowed` 
@@ -99,9 +99,9 @@ endpoint returning response from the service.
 
 ##Hystrix Circuit Breaker
 - `@HystrixCommand`
-- Hystrix Dashboards `http://localhost:8086/hystrix`
+- Hystrix Dashboards `http://localhost:9086/hystrix`
 - Hystrix streams
 
 ##Turbine
-- Hystrix streams collected automatically  `http://localhost:8086/turbine.stream`
+- Hystrix streams collected automatically  `http://localhost:9086/turbine.stream`
 - Apps to track configured via properties and resolved via Eureka Discovery Client
