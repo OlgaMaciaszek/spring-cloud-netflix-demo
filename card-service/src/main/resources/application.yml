@@ -10,3 +10,9 @@ logging:
     org.springframework: debug
 server:
   port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics
