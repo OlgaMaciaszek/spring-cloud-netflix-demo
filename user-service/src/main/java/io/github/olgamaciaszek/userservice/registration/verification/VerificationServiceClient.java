@@ -3,6 +3,7 @@ package io.github.olgamaciaszek.userservice.registration.verification;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.cloud.circuitbreaker.commons.CircuitBreakerFactory;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
@@ -17,11 +18,13 @@ public class VerificationServiceClient {
 
 	private final RestTemplate restTemplate;
 	private final DiscoveryClient discoveryClient;
+	private final CircuitBreakerFactory circuitBreakerFactory;
 
 	public VerificationServiceClient(RestTemplate restTemplate,
-			DiscoveryClient discoveryClient) {
+			DiscoveryClient discoveryClient, CircuitBreakerFactory circuitBreakerFactory) {
 		this.restTemplate = restTemplate;
 		this.discoveryClient = discoveryClient;
+		this.circuitBreakerFactory = circuitBreakerFactory;
 	}
 
 	public VerificationResult verifyNewUser(UUID userUuid, int userAge) {
@@ -33,7 +36,12 @@ public class VerificationServiceClient {
 						.toString() + "/fraud-verifier/users/verify")
 				.queryParam("uuid", userUuid)
 				.queryParam("age", userAge);
-		return restTemplate.getForObject(uriComponentsBuilder.toUriString(),
-				VerificationResult.class);
+		return circuitBreakerFactory.create("verifyNewUser")
+				.run(() -> restTemplate.getForObject(uriComponentsBuilder.toUriString(),
+						VerificationResult.class), throwable -> userRejected(userUuid, userAge));
+	}
+
+	private VerificationResult userRejected(UUID userUuid, int userAge) {
+		return VerificationResult.failed(userUuid);
 	}
 }

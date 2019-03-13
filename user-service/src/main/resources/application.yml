@@ -10,6 +10,7 @@ eureka:
 logging:
   level:
     org.springframework: debug
+    io.github.resilience4j: debug
 server:
   port: 8082
 
