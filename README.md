@@ -61,7 +61,7 @@ endpoint returning response from the service.
     |                                    |                        |                     |                         |                  |               |
 ```
 
-```bash
+```
 +-------+                         +-------+         +-----------------+
 | User  |                         | Proxy |         | IgnoredService  |
 +-------+                         +-------+         +-----------------+
