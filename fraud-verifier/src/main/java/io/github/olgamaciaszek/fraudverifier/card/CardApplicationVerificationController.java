@@ -1,10 +1,9 @@
-package io.github.olgamaciaszek.fraudverifier.controllers;
+package io.github.olgamaciaszek.fraudverifier.card;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
 import io.github.olgamaciaszek.fraudverifier.VerificationResult;
-import io.github.olgamaciaszek.fraudverifier.card.CardApplicationVerificationService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,16 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/cards")
-public class CardApplicationVerificationController {
+class CardApplicationVerificationController {
 
 	private final CardApplicationVerificationService cardApplicationVerificationService;
 
-	public CardApplicationVerificationController(CardApplicationVerificationService cardApplicationVerificationService) {
+	CardApplicationVerificationController(CardApplicationVerificationService cardApplicationVerificationService) {
 		this.cardApplicationVerificationService = cardApplicationVerificationService;
 	}
 
 	@GetMapping("/verify")
-	public ResponseEntity<VerificationResult> verify(@RequestParam UUID uuid,
+	ResponseEntity<VerificationResult> verify(@RequestParam UUID uuid,
 			@RequestParam BigDecimal cardCapacity) {
 		VerificationResult result = cardApplicationVerificationService
 				.verify(uuid, cardCapacity);

@@ -1,8 +1,5 @@
-package io.github.olgamaciaszek.cardservice.controllers;
+package io.github.olgamaciaszek.cardservice.application;
 
-import io.github.olgamaciaszek.cardservice.application.ApplicationResult;
-import io.github.olgamaciaszek.cardservice.application.CardApplicationDto;
-import io.github.olgamaciaszek.cardservice.application.CardApplicationService;
 import reactor.core.publisher.Mono;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,16 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/application")
-public class CardApplicationController {
+class CardApplicationController {
 
 	private final CardApplicationService cardApplicationService;
 
-	public CardApplicationController(CardApplicationService cardApplicationService) {
+	CardApplicationController(CardApplicationService cardApplicationService) {
 		this.cardApplicationService = cardApplicationService;
 	}
 
 	@PostMapping
-	public Mono<ApplicationResult> apply(@RequestBody CardApplicationDto applicationDTO) {
+	Mono<ApplicationResult> apply(@RequestBody CardApplicationDto applicationDTO) {
 		return cardApplicationService.registerApplication(applicationDTO);
 	}
 }

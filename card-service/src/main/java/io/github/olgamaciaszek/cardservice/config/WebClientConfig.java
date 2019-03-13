@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.cardservice.application.config;
+package io.github.olgamaciaszek.cardservice.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

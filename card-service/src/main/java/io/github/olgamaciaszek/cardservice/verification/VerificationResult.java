@@ -7,7 +7,7 @@ import java.util.UUID;
  */
 public class VerificationResult {
 
-	public UUID uuid;
+	private UUID uuid;
 	public Status status;
 
 	private VerificationResult(UUID uuid, Status status) {

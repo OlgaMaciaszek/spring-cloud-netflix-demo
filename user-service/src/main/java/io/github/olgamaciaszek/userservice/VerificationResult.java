@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.userservice.registration.verification;
+package io.github.olgamaciaszek.userservice;
 
 import java.util.UUID;
 

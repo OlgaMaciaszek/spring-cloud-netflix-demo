@@ -1,10 +1,8 @@
-package io.github.olgamaciaszek.userservice.model;
+package io.github.olgamaciaszek.userservice;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.UUID;
-
-import io.github.olgamaciaszek.userservice.dto.UserDto;
 
 /**
  * @author Olga Maciaszek-Sharma

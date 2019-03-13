@@ -8,7 +8,7 @@ import io.github.olgamaciaszek.cardservice.user.User;
 /**
  * @author Olga Maciaszek-Sharma
  */
-public class CardApplication {
+class CardApplication {
 
 	private final UUID uuid;
 	private final User user;
