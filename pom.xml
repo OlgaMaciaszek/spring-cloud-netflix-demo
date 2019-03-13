@@ -14,7 +14,6 @@
 		<module>fraud-verifier</module>
 		<module>eureka-server</module>
 		<module>ignored-service</module>
-		<module>turbine</module>
 		<module>user-service</module>
 	</modules>
 
