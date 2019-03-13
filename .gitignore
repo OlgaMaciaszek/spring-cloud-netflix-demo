@@ -24,3 +24,5 @@ HELP.md
 /nbdist/
 /.nb-gradle/
 /build/
+turbine/
+zuul-proxy/
