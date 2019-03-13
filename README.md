@@ -107,4 +107,4 @@ in a `@Configuration` class
 - Resilience4J used underneath
 
 ##Micrometer + Prometheus
-- HTTP trafic monitore using Micrometer + Prometheus
+- HTTP traffic monitoring using Micrometer + Prometheus
