@@ -37,6 +37,7 @@ management:
         include:
           - hystrix.stream
           - metrics
+          - prometheus
 #hystrix:
 #  command:
 #    default:

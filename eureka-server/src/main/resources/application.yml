@@ -9,4 +9,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: metrics
+        include:
+          - metrics
+          - prometheus

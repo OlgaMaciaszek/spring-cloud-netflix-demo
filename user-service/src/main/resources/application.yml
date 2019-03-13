@@ -21,3 +21,4 @@ management:
         include:
           - hystrix.stream
           - metrics
+          - prometheus

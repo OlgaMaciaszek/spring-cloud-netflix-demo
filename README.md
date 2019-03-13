@@ -10,7 +10,7 @@ After running all the apps execute POST at `localhost:9080/application` passing
 `cardApplication.json` as body.
 
 ```bash
-http POST localhost:8080/application < cardApplication.json
+http POST localhost:9080/application < cardApplication.json
 ```
 
 #Existing setup with Spring Cloud Netflix
