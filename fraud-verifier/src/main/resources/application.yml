@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 9081
 
 spring:
   application:
@@ -11,3 +11,10 @@ eureka:
 logging:
   level:
     org.springframework: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus

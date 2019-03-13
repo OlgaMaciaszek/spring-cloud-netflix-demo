@@ -9,10 +9,11 @@ logging:
   level:
     org.springframework: debug
 server:
-  port: 8080
-
+  port: 9080
 management:
   endpoints:
     web:
       exposure:
-        include: metrics
+        include:
+          - metrics
+          - prometheus
