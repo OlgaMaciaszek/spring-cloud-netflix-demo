@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: 9084
 
 spring:
   application:
@@ -13,3 +13,9 @@ eureka:
 logging:
   level:
     org.springframework: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics

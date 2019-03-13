@@ -6,7 +6,7 @@
 card applications and new users
 - `ignored` service
 
-After running all the apps execute POST at `localhost:8080/application` passing 
+After running all the apps execute POST at `localhost:9080/application` passing 
 `cardApplication.json` as body.
 
 ```bash
@@ -28,9 +28,9 @@ http POST localhost:8080/application < cardApplication.json
 
 ##Hystrix Circuit Breaker
 - `@HystrixCommand`
-- Hystrix Dashboards `http://localhost:8086/hystrix`
+- Hystrix Dashboards `http://localhost:9086/hystrix`
 - Hystrix streams
 
 ##Turbine
-- Hystrix streams collected automatically  `http://localhost:8086/turbine.stream`
+- Hystrix streams collected automatically  `http://localhost:9086/turbine.stream`
 - Apps to track configured via properties and resolved via Eureka Discovery Client
