@@ -1,10 +1,88 @@
 # Sample Credit Card application eco-system
 
+After running all the apps execute POST at `localhost:8080/application` passing 
+`cardApplication.json` as body.
+
+```bash
+http POST localhost:8080/application < cardApplication.json
+```
+
 - new card applications registered via `card-service`
 - user registered via `user-service`
 - `fraud-service` called by `card-service` and `user-service` to verify 
 card applications and new users
-- `ignored` service
+
+
+```bash
+http GET olgahost:8083/ignored/test
+```
+
+```bash
+http GET olgahost:8083/ignored/test/allowed
+```
+
+- `ignored` service with `test` endpoint returning 404 via Proxy and `/test/allowed` 
+endpoint returning response from the service.
+
+```
++-------+                         +-------------+          +-------------+          +-------+             +---------------+ +-----------------+ +---------+
+| User  |                         | CardService |          | UserService |          | Proxy |             | FraudVerifier | | IgnoredService  | | Turbine |
++-------+                         +-------------+          +-------------+          +-------+             +---------------+ +-----------------+ +---------+
+    |                                    |                        |                     |                         |                  |               |
+    | Register application               |                        |                     |                         |                  |               |
+    |----------------------------------->|                        |                     |                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    | Create new user        |                     |                         |                  |               |
+    |                                    |----------------------->|                     |                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |                        | Verify new user     |                         |                  |               |
+    |                                    |                        |-------------------->|                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |                        |                     | Verify new user         |                  |               |
+    |                                    |                        |                     |------------------------>|                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |                        |                     |           User verified |                  |               |
+    |                                    |                        |                     |<------------------------|                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |                        |       User verified |                         |                  |               |
+    |                                    |                        |<--------------------|                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |           User created |                     |                         |                  |               |
+    |                                    |<-----------------------|                     |                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    | Verify card application|                     |                         |                  |               |
+    |                                    |----------------------------------------------------------------------->|                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |                                    |                        |                     Card application verified |                  |               |
+    |                                    |<-----------------------------------------------------------------------|                  |               |
+    |                                    |                        |                     |                         |                  |               |
+    |        Card application registered |                        |                     |                         |                  |               |
+    |<-----------------------------------|                        |                     |                         |                  |               |
+    |                                    |                        |                     |                         |                  |               |
+```
+
+```bash
++-------+                         +-------+         +-----------------+
+| User  |                         | Proxy |         | IgnoredService  |
++-------+                         +-------+         +-----------------+
+    |                                 |                      |
+    | IgnoredService/Test             |                      |
+    |-------------------------------->|                      |
+    |                                 |                      |
+    |                             404 |                      |
+    |<--------------------------------|                      |
+    |                                 |                      |
+    | IgnoredService/Test/Allowed     |                      |
+    |-------------------------------->|                      |
+    |                                 |                      |
+    |                                 | Get allowed          |
+    |                                 |--------------------->|
+    |                                 |                      |
+    |                         Allowed |                      |
+    |<--------------------------------|                      |
+    |                                 |                      |
+
+```
 
 #Existing setup with Spring Cloud Netflix
 
