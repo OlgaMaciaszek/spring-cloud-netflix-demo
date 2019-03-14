@@ -11,7 +11,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 /**
  * @author Olga Maciaszek-Sharma
  */
-@LoadBalancerClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
 @Component
 public class VerificationServiceClient {
 

@@ -104,7 +104,7 @@ endpoint returning response from the service.
 - HTTP call and fallback method defined
 - Circuit breaker configuration modified in `Customizer<CircuitBreaker` bean 
 in a `@Configuration` class 
-- Resilience4J used underneath
+- Resilience4J used underneath																																
 
 ## Micrometer + Prometheus
 - HTTP traffic monitoring using Micrometer + Prometheus
