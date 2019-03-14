@@ -1,9 +1,8 @@
-package io.github.olgamaciaszek.cardservice.excluded;
+package io.github.olgamaciaszek.excluded;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RoundRobinRule;
 
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
