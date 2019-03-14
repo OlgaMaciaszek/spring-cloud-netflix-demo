@@ -49,7 +49,7 @@ run_app turbine
 run_app user-service
 run_app zuul-proxy
 
-wait 40
+wait 120
 
 echo "Sending a request"
 
