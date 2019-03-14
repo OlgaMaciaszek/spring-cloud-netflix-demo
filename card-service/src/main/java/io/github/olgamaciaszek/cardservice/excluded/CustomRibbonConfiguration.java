@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.cardservice.config;
+package io.github.olgamaciaszek.cardservice.excluded;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RoundRobinRule;
@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
  * @author Olga Maciaszek-Sharma
  */
 @Configuration
-@RibbonClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
 public class CustomRibbonConfiguration {
 
 	@Bean

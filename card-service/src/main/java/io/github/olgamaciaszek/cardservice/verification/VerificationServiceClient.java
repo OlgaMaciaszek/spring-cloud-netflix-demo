@@ -1,9 +1,6 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
-import io.github.olgamaciaszek.cardservice.config.CustomRibbonConfiguration;
-
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
