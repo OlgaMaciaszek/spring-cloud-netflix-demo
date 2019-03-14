@@ -8,7 +8,7 @@ turbine:
   cluster-name-expression: new String("default")
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
 spring:
   application:
     name: turbine

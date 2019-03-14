@@ -3,14 +3,9 @@ server:
 spring:
   application:
     name: proxy
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
 
 management:
   endpoints:

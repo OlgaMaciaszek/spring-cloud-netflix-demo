@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: fraud-verifier
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info

@@ -1,15 +1,9 @@
 spring:
   application:
     name: user-service
-
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
 server:
   port: 9082
 
