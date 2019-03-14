@@ -31,6 +31,7 @@ kill_app ignored-service
 kill_app turbine
 kill_app user-service
 kill_app zuul-proxy
+kill_app gateway-proxy
 
 echo "Building the apps"
 
@@ -45,9 +46,8 @@ wait 10
 run_app card-service
 run_app fraud-verifier
 run_app ignored-service
-run_app turbine
 run_app user-service
-run_app zuul-proxy
+run_app gateway-proxy
 
 wait 120
 
