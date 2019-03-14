@@ -86,26 +86,26 @@ endpoint returning response from the service.
     |<--------------------------------|                      |
     |                                 |                      |
 ```
-#Setup using new stack
+# Setup using new stack
 
-##Client side load-balancing using LoadBalancerClient
+## Client side load-balancing using LoadBalancerClient
 
 - Ribbon used via `@LoadBalanced` `WebClient`
 - Ribbon configuration modified via `@LoadBalancerClient`
 
-##Apps communicating via Gateway:
+## Apps communicating via Gateway:
 - Routes have to be explicitly defined
 - Possibility to configure routes either via properties or Java configuration
 - All headers passed by default
 - Routes matched using predicates, requests modified using filters
 
-##Spring Cloud Circuit Breaker + Resilience4J
+## Spring Cloud Circuit Breaker + Resilience4J
 - Interactions defined using injected `CircuitBreakerFactory` via the `create()` method
 - HTTP call and fallback method defined
 - Circuit breaker configuration modified in `Customizer<CircuitBreaker` bean 
 in a `@Configuration` class 
 - Resilience4J used underneath
 
-##Micrometer + Prometheus
+## Micrometer + Prometheus
 - HTTP traffic monitoring using Micrometer + Prometheus
 - Added a Micrometer's `Timer` to `VerificationServiceClient`
