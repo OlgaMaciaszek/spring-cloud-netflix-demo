@@ -1,10 +1,8 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
-import io.github.olgamaciaszek.cardservice.config.CustomRibbonConfiguration;
 import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
