@@ -12,7 +12,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 /**
  * @author Olga Maciaszek-Sharma
  */
-@RibbonClient(name = "verification-service-client", configuration = CustomRibbonConfiguration.class)
 @Component
 public class VerificationServiceClient {
 
