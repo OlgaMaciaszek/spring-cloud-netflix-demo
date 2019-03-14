@@ -1,11 +1,9 @@
 package io.github.olgamaciaszek.cardservice;
 
-import io.github.olgamaciaszek.cardservice.excluded.CustomRibbonConfiguration;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(exclude = CustomRibbonConfiguration.class)
+@SpringBootApplication
 public class CardServiceApplication {
 
 	public static void main(String[] args) {

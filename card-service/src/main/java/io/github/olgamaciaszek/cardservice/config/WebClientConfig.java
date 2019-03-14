@@ -1,6 +1,6 @@
 package io.github.olgamaciaszek.cardservice.config;
 
-import io.github.olgamaciaszek.cardservice.excluded.CustomRibbonConfiguration;
+import io.github.olgamaciaszek.excluded.CustomRibbonConfiguration;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
