@@ -2,14 +2,9 @@ spring:
   application:
     name: user-service
 
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
     io.github.resilience4j: debug
 server:
   port: 9082
