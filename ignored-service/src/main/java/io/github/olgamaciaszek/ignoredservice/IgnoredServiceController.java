@@ -22,3 +22,13 @@ class IgnoredServiceController {
 	}
 
 }
+
+@RestController
+@RequestMapping("/ignored/test")
+class IgnoredServiceAllowedController {
+
+	@GetMapping("/allowed")
+	String allowed() {
+		return "Allowed endpoint called";
+	}
+}

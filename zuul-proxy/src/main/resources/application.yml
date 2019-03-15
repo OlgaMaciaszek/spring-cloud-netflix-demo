@@ -23,4 +23,4 @@ zuul:
   routes:
     allowed:
       serviceId: ignored
-      path: /test/allowed
+      path: /**/test/allowed
