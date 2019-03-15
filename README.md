@@ -1,5 +1,7 @@
 # Sample Credit Card application eco-system
 
+This branch contains the new stack demo. To see the same demo with Spring-Cloud-Netflix stack, check out the branch `old-stack`.
+
 After running all the apps execute POST at `localhost:8080/application` passing 
 `cardApplication.json` as body.
 
