@@ -14,10 +14,10 @@ card applications and new users
 
 
 ```bash
-http GET olgahost:9083/ignored/test
+http GET localhost:9083/ignored/test
 ```
 ```bash
-http GET olgahost:9083/ignored/test/allowed
+http GET localhost:9083/ignored/test/allowed
 ```
 - `ignored` service with `test` endpoint returning 404 via Proxy and `/test/allowed` 
 endpoint returning response from the service.

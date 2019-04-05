@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo-service
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+logging:
+  level:
+    org.springframework: debug
+server:
+  port: 6666
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus
