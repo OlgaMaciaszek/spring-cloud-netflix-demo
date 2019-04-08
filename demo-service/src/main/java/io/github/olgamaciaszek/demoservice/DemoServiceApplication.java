@@ -14,10 +14,14 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
@@ -25,6 +29,8 @@ import org.springframework.web.client.RestTemplate;
 // Ribbon is deprecated!
 @RibbonClient(name = "card-service",
 		configuration = LoadBalancedConfiguration.class)
+// feign
+@EnableFeignClients
 public class DemoServiceApplication implements CommandLineRunner {
 
 	public static void main(String[] args) { SpringApplication.run(DemoServiceApplication.class, args);
@@ -32,6 +38,7 @@ public class DemoServiceApplication implements CommandLineRunner {
 
 	@Autowired MyService myService;
 	@Autowired MyLoadBalancedService myLoadBalancedService;
+	@Autowired MyFeignClient myFeignClient;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -41,10 +48,14 @@ public class DemoServiceApplication implements CommandLineRunner {
 //		myLoadBalancedService.callLoadBalanced();
 //		myLoadBalancedService.callLoadBalanced();
 //		myLoadBalancedService.callLoadBalanced();
-		myService.callLoadBalanced();
-		myService.callLoadBalanced();
-		myService.callLoadBalanced();
-		myService.callLoadBalanced();
+//		myService.callLoadBalanced();
+//		myService.callLoadBalanced();
+//		myService.callLoadBalanced();
+//		myService.callLoadBalanced();
+		myFeignClient.callFeign();
+		myFeignClient.callFeign();
+		myFeignClient.callFeign();
+		myFeignClient.callFeign();
 	}
 }
 
@@ -72,6 +83,11 @@ class DemoServiceConfiguration {
 	@Bean
 	MyLoadBalancedService myLoadBalancedService(LoadBalancerClient loadBalancerClient) {
 		return new MyLoadBalancedService(loadBalancerClient);
+	}
+
+	@Bean
+	MyFeignClient myFeignClient(CardServiceClient cardServiceClient) {
+		return new MyFeignClient(cardServiceClient);
 	}
 
 	@Bean
@@ -173,4 +189,37 @@ class MyLoadBalancedService {
 						.body(request), String.class).getBody();
 		System.out.println("\n\n\nRESPONSE: [\n" + response + "\n\n]");
 	}
+}
+
+
+class MyFeignClient {
+
+	private final CardServiceClient cardServiceClient;
+
+	MyFeignClient(CardServiceClient cardServiceClient) {
+		this.cardServiceClient = cardServiceClient;
+	}
+
+	void callFeign() {
+		System.out.println("\n\n FEIGN() \n\n");
+		String request = "{\n"
+				+ "  \"user\": {\n"
+				+ "    \"name\": \"Mary\",\n"
+				+ "    \"surname\": \"Smith\",\n"
+				+ "    \"idNo\": \"ZXC123\",\n"
+				+ "    \"dateOfBirth\": \"1984-11-03\"\n"
+				+ "  },\n"
+				+ "  \"cardCapacity\": 111\n"
+				+ "}\n";
+		String response = this.cardServiceClient.application(request);
+		System.out.println("\n\n\nRESPONSE: [\n" + response + "\n\n]");
+	}
+}
+
+@FeignClient("card-service")
+interface CardServiceClient {
+	@PostMapping(path = "/application",
+			produces = "application/json",
+			consumes = "application/json")
+	String application(@RequestBody String string);
 }
