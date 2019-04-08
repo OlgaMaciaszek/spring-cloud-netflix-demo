@@ -7,7 +7,7 @@ eureka:
       enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
 server:
   port: 9080
 management:
