@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Service;
 
 @SpringBootApplication
 public class DemoServiceApplication {
@@ -26,7 +25,6 @@ class DemoServiceConfiguration {
 	}
 }
 
-@Service
 class MyService {
 
 	private final String message;
