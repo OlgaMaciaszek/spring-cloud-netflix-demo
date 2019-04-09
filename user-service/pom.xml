@@ -45,6 +45,16 @@
 			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
 			<version>0.0.1.BUILD-SNAPSHOT</version>
 		</dependency>
+		<!-- Externalized configuration -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- Zipkin -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

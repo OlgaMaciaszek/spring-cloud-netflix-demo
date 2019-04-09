@@ -1,0 +1,14 @@
+zipkin:
+  image: openzipkin/zipkin
+  environment:
+    - TRANSPORT_TYPE=http
+    - ZIPKIN_LOG_LEVEL=DEBUG
+  ports:
+    - 9411:9411
+
+rabbitmq:
+  image: rabbitmq:management
+  ports:
+    - 5672:5672
+    - 15672:15672
+
