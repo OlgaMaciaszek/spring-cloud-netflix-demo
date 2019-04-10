@@ -1,10 +1,16 @@
+
 spring:
   application:
     name: demo-service
-eureka:
-  client:
-    healthcheck:
-      enabled: true
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: my_exchange
+          content-type: application/json
+        output:
+          destination: my_other_exchange
+
 logging:
   level:
     org.springframework: info

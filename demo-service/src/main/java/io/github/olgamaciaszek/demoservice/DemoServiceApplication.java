@@ -28,10 +28,16 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
@@ -45,6 +51,9 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 // hystrix - deprecated
 @EnableHystrix
+// Stream
+//@EnableBinding(Sink.class)
+@EnableBinding(Processor.class)
 public class DemoServiceApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
@@ -82,7 +91,7 @@ public class DemoServiceApplication implements CommandLineRunner {
 //		myService.callLoadBalanced();
 //		myService.callLoadBalanced();
 
-		myFeignClient.callFeign();
+//		myFeignClient.callFeign();
 //		myFeignClient.callFeign();
 //		myFeignClient.callFeign();
 //		myFeignClient.callFeign();
@@ -150,6 +159,11 @@ class DemoServiceConfiguration {
 										.build())
 								.circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())
 								.build());
+	}
+
+	@Bean
+	MyListener myListener() {
+		return new MyListener();
 	}
 
 	@Bean
@@ -354,5 +368,25 @@ class MyFeignWithResilience {
 	String fallback() {
 		System.out.println("\nFALLBACK!\n");
 		return "";
+	}
+}
+
+class MyListener {
+
+	private static final Logger log = LoggerFactory.getLogger(MyListener.class);
+
+//	@StreamListener(Sink.INPUT)
+//	void doSth(Message message) {
+//		log.info("GOT A MESSAGE WITH HEADERS [" + message.getHeaders() + "] AND BODY [" + message.getPayload() + "]");
+//	}
+
+	@StreamListener(Processor.INPUT)
+	@SendTo(Processor.OUTPUT)
+	Message doSthElse(Message message) {
+		log.info("GOT A MESSAGE WITH HEADERS [" + message.getHeaders() + "] AND BODY [" + message.getPayload() + "]");
+		log.info("Will send it to the output");
+		return MessageBuilder.withPayload("FOOOO")
+				.setHeader("barbar", "barbar")
+				.build();
 	}
 }
