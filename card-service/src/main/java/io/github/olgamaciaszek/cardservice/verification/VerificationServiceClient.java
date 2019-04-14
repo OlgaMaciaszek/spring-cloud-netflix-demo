@@ -30,6 +30,8 @@ public class VerificationServiceClient {
 						.queryParam("cardCapacity", verificationApplication
 								.getCardCapacity())
 						.build())
-				.retrieve().bodyToMono(VerificationResult.class);
+				.retrieve()
+				.bodyToMono(VerificationResult.class)
+				.onErrorReturn(new VerificationResult());
 	}
 }

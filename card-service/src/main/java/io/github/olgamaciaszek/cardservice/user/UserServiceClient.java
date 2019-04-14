@@ -35,6 +35,7 @@ public class UserServiceClient {
 						.toString() + "/user-service/registration")
 				.syncBody(userDto)
 				.retrieve()
-				.bodyToMono(User.class);
+				.bodyToMono(User.class)
+				.onErrorReturn(new User());
 	}
 }
