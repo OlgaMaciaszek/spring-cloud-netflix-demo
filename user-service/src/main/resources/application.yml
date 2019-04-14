@@ -22,3 +22,4 @@ management:
           - hystrix.stream
           - metrics
           - prometheus
+          - health

@@ -19,6 +19,8 @@ class ProxyConfig {
 						route -> route.path("/user-service/**")
 								.and()
 								.method(HttpMethod.POST)
+								.or()
+								.method(HttpMethod.GET)
 								.filters(filter -> filter.stripPrefix(1))
 								.uri("lb://user-service")).build();
 	}
