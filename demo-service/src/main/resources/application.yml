@@ -21,5 +21,6 @@ management:
     web:
       exposure:
         include:
+          - refresh
           - metrics
           - prometheus
