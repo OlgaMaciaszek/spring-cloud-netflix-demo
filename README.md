@@ -2,11 +2,11 @@
 
 This branch contains the new stack demo. To see the same demo with Spring-Cloud-Netflix stack, check out the branch `old-stack`.
 
-After running all the apps execute POST at `localhost:8080/application` passing 
+After running all the apps execute POST at `localhost:9080/application` passing 
 `cardApplication.json` as body.
 
 ```bash
-http POST localhost:8080/application < cardApplication.json
+http POST localhost:9080/application < cardApplication.json
 ```
 
 - new card applications registered via `card-service`
