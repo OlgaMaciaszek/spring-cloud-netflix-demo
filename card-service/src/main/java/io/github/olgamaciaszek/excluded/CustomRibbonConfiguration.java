@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.cardservice.application.config;
+package io.github.olgamaciaszek.excluded;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RoundRobinRule;

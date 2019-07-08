@@ -1,15 +1,18 @@
 server:
-  port: 8084
+  port: 9084
 
 spring:
   application:
     name: ignored
 
-eureka:
-  client:
-    healthcheck:
-      enabled: true
-
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus

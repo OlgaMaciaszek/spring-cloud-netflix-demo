@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.userservice.dto;
+package io.github.olgamaciaszek.userservice;
 
 import java.time.LocalDate;
 
@@ -12,6 +12,6 @@ public class UserDto {
 	public String surname;
 	public String idNo;
 
-	UserDto() {
+	public UserDto() {
 	}
 }

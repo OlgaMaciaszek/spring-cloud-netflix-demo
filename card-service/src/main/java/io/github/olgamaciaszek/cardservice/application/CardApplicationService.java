@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @author Olga Maciaszek-Sharma
  */
 @Service
-public class CardApplicationService {
+class CardApplicationService {
 
 	private final UserServiceClient userServiceClient;
 	private final VerificationServiceClient verificationServiceClient;

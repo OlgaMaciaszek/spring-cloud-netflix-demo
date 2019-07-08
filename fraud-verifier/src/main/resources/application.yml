@@ -1,13 +1,16 @@
 server:
-  port: 8081
+  port: 9081
 
 spring:
   application:
     name: fraud-verifier
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus

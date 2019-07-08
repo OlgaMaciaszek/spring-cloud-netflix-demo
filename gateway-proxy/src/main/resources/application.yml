@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 9083
 spring:
   application:
     name: proxy
@@ -34,7 +34,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include:
+          - hystrix.stream
+          - metrics
+          - prometheus
 #hystrix:
 #  command:
 #    default:

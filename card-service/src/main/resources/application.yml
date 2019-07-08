@@ -1,18 +1,15 @@
 spring:
   application:
     name: card-service
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
 server:
-  port: 8080
-
+  port: 9080
 management:
   endpoints:
     web:
       exposure:
-        include: metrics
+        include:
+          - metrics
+          - prometheus

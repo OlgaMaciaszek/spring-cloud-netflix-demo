@@ -7,6 +7,7 @@
 	<groupId>io.github.olgamaciaszek</groupId>
 	<artifactId>spring-cloud-netflix-demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>gateway-proxy</module>

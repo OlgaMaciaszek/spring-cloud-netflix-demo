@@ -2,20 +2,18 @@ spring:
   application:
     name: user-service
 
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
-    org.springframework: debug
+    org.springframework: info
     io.github.resilience4j: debug
 server:
-  port: 8082
+  port: 9082
 
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include:
+          - hystrix.stream
+          - metrics
+          - prometheus
