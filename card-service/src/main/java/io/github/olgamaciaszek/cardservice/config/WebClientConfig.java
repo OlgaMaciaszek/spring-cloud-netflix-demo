@@ -1,6 +1,6 @@
 package io.github.olgamaciaszek.cardservice.config;
 
-import io.github.olgamaciaszek.excluded.CustomRibbonConfiguration;
+import io.github.olgamaciaszek.excluded.CustomLoadBalancerConfiguration;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient;
  * @author Olga Maciaszek-Sharma
  */
 @Configuration
-@LoadBalancerClient(name = "fraud-verifier", configuration = CustomRibbonConfiguration.class)
+@LoadBalancerClient(value = "ignored", configuration = CustomLoadBalancerConfiguration.class)
 public class WebClientConfig {
 
 	@Bean

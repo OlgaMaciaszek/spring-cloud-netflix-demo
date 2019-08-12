@@ -4,9 +4,12 @@ import java.util.UUID;
 
 import io.github.olgamaciaszek.cardservice.user.User;
 import io.github.olgamaciaszek.cardservice.user.UserServiceClient;
+import io.github.olgamaciaszek.cardservice.verification.IgnoredServiceClient;
 import io.github.olgamaciaszek.cardservice.verification.VerificationApplication;
 import io.github.olgamaciaszek.cardservice.verification.VerificationResult;
 import io.github.olgamaciaszek.cardservice.verification.VerificationServiceClient;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import reactor.core.publisher.Mono;
 
 import org.springframework.stereotype.Service;
@@ -17,13 +20,17 @@ import org.springframework.stereotype.Service;
 @Service
 class CardApplicationService {
 
+	private static final Log LOG = LogFactory.getLog(CardApplicationService.class);
+
 	private final UserServiceClient userServiceClient;
 	private final VerificationServiceClient verificationServiceClient;
+	private final IgnoredServiceClient ignoredServiceClient;
 
 	public CardApplicationService(UserServiceClient userServiceClient,
-			VerificationServiceClient verificationServiceClient) {
+			VerificationServiceClient verificationServiceClient, IgnoredServiceClient ignoredServiceClient) {
 		this.userServiceClient = userServiceClient;
 		this.verificationServiceClient = verificationServiceClient;
+		this.ignoredServiceClient = ignoredServiceClient;
 	}
 
 	public Mono<ApplicationResult> registerApplication(CardApplicationDto applicationDTO) {
@@ -35,11 +42,14 @@ class CardApplicationService {
 	}
 
 	private Mono<ApplicationResult> verifyApplication(CardApplication application) {
-		return verificationServiceClient
-				.verify(new VerificationApplication(application.getUuid(),
-						application.getCardCapacity()))
-				.map(verificationResult -> updateApplication(verificationResult,
-						application));
+		return ignoredServiceClient  // calling this to show how injected LB function works
+				.callIgnoredService()
+				.doOnNext(LOG::info)
+				.then(verificationServiceClient  // uses @LoadBalanced WebClient.Builder
+						.verify(new VerificationApplication(application.getUuid(),
+								application.getCardCapacity()))
+						.map(verificationResult -> updateApplication(verificationResult,
+								application)));
 	}
 
 	private ApplicationResult updateApplication(VerificationResult verificationResult,
