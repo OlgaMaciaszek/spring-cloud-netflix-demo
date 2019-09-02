@@ -7,7 +7,6 @@ import io.github.olgamaciaszek.cardservice.user.UserServiceClient;
 import io.github.olgamaciaszek.cardservice.verification.VerificationApplication;
 import io.github.olgamaciaszek.cardservice.verification.VerificationResult;
 import io.github.olgamaciaszek.cardservice.verification.VerificationServiceClient;
-import reactor.core.publisher.Mono;
 
 import org.springframework.stereotype.Service;
 
@@ -26,32 +25,24 @@ class CardApplicationService {
 		this.verificationServiceClient = verificationServiceClient;
 	}
 
-	public Mono<ApplicationResult> registerApplication(CardApplicationDto applicationDTO) {
-		return userServiceClient.registerUser(applicationDTO.user)
-				.map(createdUser -> new CardApplication(UUID.randomUUID(),
-						createdUser, applicationDTO.cardCapacity)
-				)
-				.flatMap(this::verifyApplication);
+	public CardApplication registerApplication(CardApplicationDto applicationDTO) {
+		User user = userServiceClient.registerUser(applicationDTO.user).getBody();
+		CardApplication application = new CardApplication(UUID.randomUUID(),
+				user, applicationDTO.cardCapacity);
+		if (User.Status.OK != user.getStatus()) {
+			application.setApplicationResult(ApplicationResult.rejected());
+			return application;
 	}
-
-	private Mono<ApplicationResult> verifyApplication(CardApplication application) {
-		return verificationServiceClient
+		VerificationResult verificationResult = verificationServiceClient
 				.verify(new VerificationApplication(application.getUuid(),
-						application.getCardCapacity()))
-				.map(verificationResult -> updateApplication(verificationResult,
-						application));
-	}
-
-	private ApplicationResult updateApplication(VerificationResult verificationResult,
-			CardApplication application) {
+						application.getCardCapacity())).getBody();
 		if (!VerificationResult.Status.VERIFICATION_PASSED
-				.equals(verificationResult.status)
-				|| !User.Status.OK.equals(application.getUser().getStatus())) {
+				.equals(verificationResult.status)) {
 			application.setApplicationResult(ApplicationResult.rejected());
 		}
 		else {
 			application.setApplicationResult(ApplicationResult.granted());
 		}
-		return application.getApplicationResult();
+		return application;
 	}
 }

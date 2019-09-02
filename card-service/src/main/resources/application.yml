@@ -1,6 +1,9 @@
 spring:
   application:
     name: card-service
+  cloud:
+    loadbalancer:
+      default: true
 logging:
   level:
     org.springframework: info

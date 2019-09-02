@@ -1,10 +1,10 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
-import reactor.core.publisher.Mono;
-
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -12,21 +12,18 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Component
 public class VerificationServiceClient {
 
-	private final WebClient.Builder webClientBuilder;
+	private final RestTemplate restTemplate;
 
-	VerificationServiceClient(@Qualifier("loadBalancedWebClient") WebClient.Builder webClientBuilder) {
-		this.webClientBuilder = webClientBuilder;
+	VerificationServiceClient(@Qualifier("loadBalancedRestTemplate") RestTemplate restTemplate) {
+		this.restTemplate = restTemplate;
 	}
 
-	public Mono<VerificationResult> verify(VerificationApplication verificationApplication) {
-		return webClientBuilder.build().get()
-				.uri(uriBuilder -> uriBuilder
-						.scheme("http")
-						.host("fraud-verifier").path("/cards/verify")
+	public ResponseEntity<VerificationResult> verify(VerificationApplication verificationApplication) {
+		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
+				.fromHttpUrl("http://fraud-verifier/cards/verify")
 						.queryParam("uuid", verificationApplication.getUserId())
-						.queryParam("cardCapacity", verificationApplication
-								.getCardCapacity())
-						.build())
-				.retrieve().bodyToMono(VerificationResult.class);
+				.queryParam("cardCapacity", verificationApplication.getCardCapacity());
+		return restTemplate.getForEntity(uriComponentsBuilder.toUriString(),
+				VerificationResult.class);
 	}
 }
