@@ -3,7 +3,8 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
-      default: true
+      ribbon:
+        enabled: false
 logging:
   level:
     org.springframework: info

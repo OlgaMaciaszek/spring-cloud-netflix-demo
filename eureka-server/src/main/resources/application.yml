@@ -1,6 +1,7 @@
 server:
   port: 8761
 
+
 eureka:
   client:
     registerWithEureka: false
@@ -12,3 +13,8 @@ management:
         include:
           - metrics
           - prometheus
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
