@@ -21,7 +21,9 @@ spring:
         - Path=/ignored/test/allowed
         filters:
         - StripPrefix=1
-
+    loadbalancer:
+      ribbon:
+        enabled: false
 eureka:
   client:
     healthcheck:
