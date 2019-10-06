@@ -14,6 +14,11 @@ http POST localhost:9080/application < cardApplication.json
 - `fraud-service` called by `card-service` and `user-service` to verify 
 card applications and new users
 
+If you want to run a bigger number of requests, you can use the `ab` benchmarking tool:
+
+```bash
+ab -p cardApplication.json -T application/json -c 10 -n 20000 http://localhost:9080/application
+```
 
 ```bash
 http GET localhost:9083/ignored/test
