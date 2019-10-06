@@ -33,7 +33,7 @@ public class UserServiceClient {
 		return webClientBuilder.build()
 				.post().uri(instance.getUri()
 						.toString() + "/user-service/registration")
-				.syncBody(userDto)
+				.bodyValue(userDto)
 				.retrieve()
 				.bodyToMono(User.class);
 	}

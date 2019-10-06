@@ -33,7 +33,7 @@ class CardApplicationService {
 		this.ignoredServiceClient = ignoredServiceClient;
 	}
 
-	public Mono<ApplicationResult> registerApplication(CardApplicationDto applicationDTO) {
+	Mono<ApplicationResult> registerApplication(CardApplicationDto applicationDTO) {
 		return userServiceClient.registerUser(applicationDTO.user)
 				.map(createdUser -> new CardApplication(UUID.randomUUID(),
 						createdUser, applicationDTO.cardCapacity)

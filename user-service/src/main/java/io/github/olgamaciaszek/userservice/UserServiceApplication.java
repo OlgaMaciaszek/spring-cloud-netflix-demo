@@ -62,11 +62,9 @@ public class UserServiceApplication {
 			// for metrics
 			factory.configureCircuitBreakerRegistry(circuitBreakerRegistry);
 			// we need to allow adding those customizers regardless of the id
-			factory.addCircuitBreakerCustomizer(circuitBreaker -> {
-				CircuitBreakerMetrics
-						.ofCircuitBreakerRegistry(circuitBreakerRegistry)
-						.bindTo(meterRegistry);
-			}, "verifyNewUser");
+			factory.addCircuitBreakerCustomizer(circuitBreaker -> CircuitBreakerMetrics
+					.ofCircuitBreakerRegistry(circuitBreakerRegistry)
+					.bindTo(meterRegistry), "verifyNewUser");
 		};
 	}
 
