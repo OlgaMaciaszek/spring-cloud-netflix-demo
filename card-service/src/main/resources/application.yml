@@ -4,7 +4,7 @@ spring:
   cloud:
     loadbalancer:
       ribbon:
-        enabled: false
+        enabled: true
 logging:
   level:
     org.springframework: info
