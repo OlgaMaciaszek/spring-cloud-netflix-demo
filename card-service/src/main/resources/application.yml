@@ -3,6 +3,12 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
+      zone: zone1
+      healthcheck:
+        path:
+          default: /actuator/health
+          ignored: /health
+        interval: 40s
       ribbon:
         enabled: false
 logging:
@@ -17,3 +23,7 @@ management:
         include:
           - metrics
           - prometheus
+#eureka:
+#  instance:
+#    metadata-map:
+#      zone: zone1
