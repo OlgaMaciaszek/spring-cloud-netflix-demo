@@ -7,6 +7,10 @@ After running all the apps execute POST at `localhost:8080/application` passing
 http POST localhost:8080/application < cardApplication.json
 ```
 
+```bash
+ab -p cardApplication.json -T application/json -c 10 -n 20000 http://localhost:9080/application
+```
+
 - new card applications registered via `card-service`
 - user registered via `user-service`
 - `fraud-service` called by `card-service` and `user-service` to verify 

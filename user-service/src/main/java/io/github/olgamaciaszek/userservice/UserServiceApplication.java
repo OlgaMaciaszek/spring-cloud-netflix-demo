@@ -108,7 +108,8 @@ class VerificationServiceClient {
 	private final Timer verifyNewUserTimer;
 
 	public VerificationServiceClient(RestTemplateBuilder restTemplateBuilder,
-			DiscoveryClient discoveryClient, CircuitBreakerFactory circuitBreakerFactory, MeterRegistry meterRegistry) {
+			DiscoveryClient discoveryClient, CircuitBreakerFactory circuitBreakerFactory,
+			MeterRegistry meterRegistry) {
 		this.restTemplate = restTemplateBuilder.build();
 		this.discoveryClient = discoveryClient;
 		this.circuitBreakerFactory = circuitBreakerFactory;
