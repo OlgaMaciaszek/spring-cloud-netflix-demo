@@ -1,6 +1,10 @@
 spring:
   application:
     name: card-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 logging:
   level:
     org.springframework: info

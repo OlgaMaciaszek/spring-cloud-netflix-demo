@@ -5,18 +5,22 @@ import java.util.List;
 import java.util.UUID;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
+import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
+import io.github.resilience4j.micrometer.CircuitBreakerMetrics;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cloud.circuitbreaker.commons.CircuitBreakerFactory;
-import org.springframework.cloud.circuitbreaker.commons.Customizer;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder;
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.cloud.client.circuitbreaker.Customizer;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +39,8 @@ import static io.github.olgamaciaszek.userservice.VerificationResult.Status.VERI
 @SpringBootApplication
 public class UserServiceApplication {
 
+	private static final Logger log = LoggerFactory.getLogger(UserServiceApplication.class);
+
 	public static void main(String[] args) {
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
@@ -45,13 +51,26 @@ public class UserServiceApplication {
 	}
 
 	@Bean
-	Customizer<Resilience4JCircuitBreakerFactory> defaultCustomizer() {
-		return factory -> factory.configureDefault(id -> new Resilience4JConfigBuilder(id)
-				.timeLimiterConfig(TimeLimiterConfig.custom()
-						.timeoutDuration(Duration.ofSeconds(2))
-						.build())
-				.circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())
-				.build());
+	Customizer<Resilience4JCircuitBreakerFactory> defaultCustomizer(CircuitBreakerRegistry circuitBreakerRegistry, MeterRegistry meterRegistry) {
+		return factory -> {
+			factory.configureDefault(id -> new Resilience4JConfigBuilder(id)
+					.timeLimiterConfig(TimeLimiterConfig.custom()
+							.timeoutDuration(Duration.ofSeconds(2))
+							.build())
+					.circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())
+					.build());
+			// for metrics
+			factory.configureCircuitBreakerRegistry(circuitBreakerRegistry);
+			// we need to allow adding those customizers regardless of the id
+			factory.addCircuitBreakerCustomizer(circuitBreaker -> CircuitBreakerMetrics
+					.ofCircuitBreakerRegistry(circuitBreakerRegistry)
+					.bindTo(meterRegistry), "verifyNewUser");
+		};
+	}
+
+	@Bean
+	CircuitBreakerRegistry resilience4JCircuitBreakerRegistry() {
+		return CircuitBreakerRegistry.ofDefaults();
 	}
 
 }
@@ -113,7 +132,7 @@ class VerificationServiceClient {
 		this.restTemplate = restTemplateBuilder.build();
 		this.discoveryClient = discoveryClient;
 		this.circuitBreakerFactory = circuitBreakerFactory;
-		this.verifyNewUserTimer = meterRegistry.timer("verifyNewUser");
+		this.verifyNewUserTimer = meterRegistry.timer("verifyNewUserManual");
 	}
 
 	public VerificationResult verifyNewUser(UUID userUuid, int userAge) {

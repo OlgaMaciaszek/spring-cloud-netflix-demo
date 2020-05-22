@@ -11,9 +11,9 @@ public class User {
 
 	private final UUID uuid;
 	private final LocalDate dateOfBirth;
-	private String name;
+	private final String name;
 	private String surname;
-	private String idNo;
+	private final String idNo;
 	private Status status;
 
 	public User(UserDto userDto) {

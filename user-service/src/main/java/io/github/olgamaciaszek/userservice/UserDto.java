@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  * @author Olga Maciaszek-Sharma
  */
-public class UserDto {
+class UserDto {
 
 	public LocalDate dateOfBirth;
 	public String name;

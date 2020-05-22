@@ -8,8 +8,8 @@ import java.util.UUID;
  */
 public class VerificationApplication {
 
-	private UUID userId;
-	private BigDecimal cardCapacity;
+	private final UUID userId;
+	private final BigDecimal cardCapacity;
 
 	public VerificationApplication(UUID cardApplicationId, BigDecimal cardCapacity) {
 		this.userId = cardApplicationId;
