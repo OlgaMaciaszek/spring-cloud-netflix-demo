@@ -16,3 +16,4 @@ management:
         include:
           - metrics
           - prometheus
+          - health
