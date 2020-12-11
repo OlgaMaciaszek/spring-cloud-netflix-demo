@@ -1,10 +1,14 @@
 package io.github.olgamaciaszek.cardservice.config;
 
-import io.github.olgamaciaszek.excluded.CustomLoadBalancerConfiguration;
+import io.github.olgamaciaszek.excluded.DefaultCustomLoadBalancerConfiguration;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerLifecycle;
+import org.springframework.cloud.client.loadbalancer.RequestDataContext;
+import org.springframework.cloud.client.loadbalancer.ResponseData;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -13,7 +17,7 @@ import org.springframework.web.reactive.function.client.WebClient;
  * @author Olga Maciaszek-Sharma
  */
 @Configuration
-@LoadBalancerClient(value = "ignored", configuration = CustomLoadBalancerConfiguration.class)
+@LoadBalancerClients(defaultConfiguration = DefaultCustomLoadBalancerConfiguration.class)
 public class WebClientConfig {
 
 	@Bean
@@ -27,6 +31,11 @@ public class WebClientConfig {
 	@Qualifier("webClient")
 	WebClient.Builder webClientBuilder() {
 		return WebClient.builder();
+	}
+
+	@Bean
+	LoadBalancerLifecycle<RequestDataContext, ResponseData, ServiceInstance> testLoadBalancerLifecycle() {
+		return new TestLoadBalancerLifecycle();
 	}
 }
 

@@ -27,6 +27,7 @@ public class VerificationServiceClient {
 						.queryParam("cardCapacity", verificationApplication
 								.getCardCapacity())
 						.build())
+				.cookie("Test1", "test2")
 				.retrieve().bodyToMono(VerificationResult.class);
 	}
 }

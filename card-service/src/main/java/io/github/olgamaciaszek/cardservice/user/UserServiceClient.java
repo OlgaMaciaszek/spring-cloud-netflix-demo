@@ -34,6 +34,7 @@ public class UserServiceClient {
 				.post().uri(instance.getUri()
 						.toString() + "/user-service/registration")
 				.bodyValue(userDto)
+				.cookie("test", "test")
 				.retrieve()
 				.bodyToMono(User.class);
 	}

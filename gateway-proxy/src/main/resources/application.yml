@@ -4,6 +4,10 @@ spring:
   application:
     name: proxy
   cloud:
+    loadbalancer:
+      sticky-session:
+        add-service-instance-cookie: true
+      configurations: request-based-sticky-session
     gateway:
       routes:
       - id: fraud
