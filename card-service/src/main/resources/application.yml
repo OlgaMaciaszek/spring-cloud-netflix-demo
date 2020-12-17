@@ -3,6 +3,14 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
+      stats:
+        micrometer:
+          enabled: true
+#      configurations: health-check
+#      sticky-session:
+#        add-service-instance-cookie: true
+#      configurations: request-based-sticky-session
+
       ribbon:
         enabled: false
 logging:
