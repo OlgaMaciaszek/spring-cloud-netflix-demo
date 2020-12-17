@@ -3,6 +3,12 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
+      retry:
+        enabled: true
+      stats:
+        micrometer:
+          enabled: true
+        publish-percentile-histogram: true
       ribbon:
         enabled: false
 logging:

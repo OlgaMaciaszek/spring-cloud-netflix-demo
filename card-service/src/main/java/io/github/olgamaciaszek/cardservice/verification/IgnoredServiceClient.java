@@ -2,6 +2,7 @@ package io.github.olgamaciaszek.cardservice.verification;
 
 import reactor.core.publisher.Mono;
 
+import org.springframework.cloud.client.loadbalancer.reactive.LoadBalancedExchangeFilterFunction;
 import org.springframework.cloud.client.loadbalancer.reactive.ReactorLoadBalancerExchangeFilterFunction;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -12,9 +13,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Component
 public class IgnoredServiceClient {
 
-	private final ReactorLoadBalancerExchangeFilterFunction lbFunction;
+	private final LoadBalancedExchangeFilterFunction lbFunction;
 
-	public IgnoredServiceClient(ReactorLoadBalancerExchangeFilterFunction lbFunction) {
+	public IgnoredServiceClient(LoadBalancedExchangeFilterFunction lbFunction) {
 		this.lbFunction = lbFunction;
 	}
 
