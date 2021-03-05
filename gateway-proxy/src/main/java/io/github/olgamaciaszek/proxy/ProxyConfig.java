@@ -1,10 +1,14 @@
 package io.github.olgamaciaszek.proxy;
 
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerLifecycle;
+import org.springframework.cloud.client.loadbalancer.RequestDataContext;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -22,5 +26,10 @@ class ProxyConfig {
 								.filters(filter -> filter.stripPrefix(1)
 								)
 								.uri("lb://user-service")).build();
+	}
+
+	@Bean
+	LoadBalancerLifecycle<RequestDataContext, ServerHttpResponse, ServiceInstance> testLoadBalancerLifecycle() {
+		return new TestLoadBalancerLifecycle();
 	}
 }

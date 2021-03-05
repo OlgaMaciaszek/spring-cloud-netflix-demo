@@ -3,11 +3,25 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
+      configurations: same-instance-preference
+      retry:
+        enabled: false
+        retryable-status-codes: 503
+        avoid-previous-instance: false
       ribbon:
         enabled: false
+      zone: test
+      sticky-session:
+        add-service-instance-cookie: true
+        instance-id-cookie-name:
+#      cache:
+#        ttl: 60m
+#        enabled: false
+#        caffeine:
+#          spec: maximumSize=200,expireAfterWrite=300s
 logging:
   level:
-    org.springframework: info
+    org.springframework: debug
 server:
   port: 9080
 management:
@@ -17,3 +31,12 @@ management:
         include:
           - metrics
           - prometheus
+          - health
+eureka:
+  instance:
+    metadata-map:
+      zone: zone1
+  client:
+    healthcheck:
+      enabled: true
+

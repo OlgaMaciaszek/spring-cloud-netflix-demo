@@ -4,7 +4,6 @@ import java.util.UUID;
 
 import io.github.olgamaciaszek.cardservice.user.User;
 import io.github.olgamaciaszek.cardservice.user.UserServiceClient;
-import io.github.olgamaciaszek.cardservice.verification.IgnoredServiceClient;
 import io.github.olgamaciaszek.cardservice.verification.VerificationApplication;
 import io.github.olgamaciaszek.cardservice.verification.VerificationResult;
 import io.github.olgamaciaszek.cardservice.verification.VerificationServiceClient;
@@ -24,13 +23,16 @@ class CardApplicationService {
 
 	private final UserServiceClient userServiceClient;
 	private final VerificationServiceClient verificationServiceClient;
-	private final IgnoredServiceClient ignoredServiceClient;
+//	private final IgnoredServiceClient ignoredServiceClient;
 
 	public CardApplicationService(UserServiceClient userServiceClient,
-			VerificationServiceClient verificationServiceClient, IgnoredServiceClient ignoredServiceClient) {
+			VerificationServiceClient verificationServiceClient
+//			,
+//			IgnoredServiceClient ignoredServiceClient
+			) {
 		this.userServiceClient = userServiceClient;
 		this.verificationServiceClient = verificationServiceClient;
-		this.ignoredServiceClient = ignoredServiceClient;
+//		this.ignoredServiceClient = ignoredServiceClient;
 	}
 
 	Mono<ApplicationResult> registerApplication(CardApplicationDto applicationDTO) {
@@ -42,14 +44,18 @@ class CardApplicationService {
 	}
 
 	private Mono<ApplicationResult> verifyApplication(CardApplication application) {
-		return ignoredServiceClient  // calling this to show how injected LB function works
-				.callIgnoredService()
-				.doOnNext(LOG::info)
-				.then(verificationServiceClient  // uses @LoadBalanced WebClient.Builder
+		return
+//				ignoredServiceClient  // calling this to show how injected LB function works
+//				.callIgnoredService()
+//				.doOnNext(LOG::info)
+//				.then(
+						verificationServiceClient  // uses @LoadBalanced WebClient.Builder
 						.verify(new VerificationApplication(application.getUuid(),
 								application.getCardCapacity()))
 						.map(verificationResult -> updateApplication(verificationResult,
-								application)));
+								application))
+//				)
+				;
 	}
 
 	private ApplicationResult updateApplication(VerificationResult verificationResult,

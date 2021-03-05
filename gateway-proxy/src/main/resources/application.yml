@@ -4,6 +4,13 @@ spring:
   application:
     name: proxy
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+      hint:
+        default: test
+      sticky-session:
+        add-service-instance-cookie: true
     gateway:
       routes:
       - id: fraud
@@ -12,6 +19,10 @@ spring:
         - Path=/fraud-verifier/**
         filters:
         - StripPrefix=1
+#        - name: CircuitBreaker
+#          args:
+#            fallbackUri: xxx
+#            routeId: xxxx
         - name: Retry
           args:
             retries: 3

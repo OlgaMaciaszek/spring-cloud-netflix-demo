@@ -14,3 +14,7 @@ management:
         include:
           - metrics
           - prometheus
+eureka:
+  instance:
+    metadata-map:
+      zone: zone1
