@@ -9,8 +9,8 @@ spring:
         enabled: false
       hint:
         default: test
-      sticky-session:
-        add-service-instance-cookie: true
+#      sticky-session:
+#        add-service-instance-cookie: true
     gateway:
       routes:
       - id: fraud

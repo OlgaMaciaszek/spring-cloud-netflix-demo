@@ -5,6 +5,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerLifecycle;
 import org.springframework.cloud.client.loadbalancer.RequestDataContext;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -14,6 +15,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
  * @author Olga Maciaszek-Sharma
  */
 @Configuration
+//@LoadBalancerClients(defaultConfiguration = CustomLbConfiguration.class)
 class ProxyConfig {
 
 	@Bean
@@ -32,4 +34,5 @@ class ProxyConfig {
 	LoadBalancerLifecycle<RequestDataContext, ServerHttpResponse, ServiceInstance> testLoadBalancerLifecycle() {
 		return new TestLoadBalancerLifecycle();
 	}
+
 }
