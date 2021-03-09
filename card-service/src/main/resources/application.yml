@@ -5,6 +5,8 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
+      sticky-session:
+        add-service-instance-cookie: true
 logging:
   level:
     org.springframework: info
