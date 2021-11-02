@@ -1,30 +1,24 @@
-//package io.github.olgamaciaszek.excluded;
+package io.github.olgamaciaszek.excluded;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.reactive.function.client.WebClient;
+
+/**
+ * @author Olga Maciaszek-Sharma
+ */
+public class CustomLoadBalancerConfiguration {
+
 //
-//import org.springframework.beans.factory.ObjectProvider;
-//import org.springframework.cloud.client.discovery.ReactiveDiscoveryClient;
-//import org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerProperties;
-//import org.springframework.cloud.loadbalancer.cache.LoadBalancerCacheManager;
-//import org.springframework.cloud.loadbalancer.core.CachingServiceInstanceListSupplier;
-//import org.springframework.cloud.loadbalancer.core.DiscoveryClientServiceInstanceListSupplier;
-//import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
-//import org.springframework.cloud.loadbalancer.core.ZonePreferenceServiceInstanceListSupplier;
-//import org.springframework.context.ApplicationContext;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.core.env.Environment;
-//
-///**
-// * @author Olga Maciaszek-Sharma
-// */
-//public class CustomLoadBalancerConfiguration {
-//
-////
-////	@Bean
-////	ReactorLoadBalancer<ServiceInstance> reactorLoadBalancer(Environment environment,
-////			LoadBalancerClientFactory loadBalancerClientFactory) {
-////		String name = environment.getProperty(LoadBalancerClientFactory.PROPERTY_NAME);
-////		return new TestRoundRobinLoadBalancer(name, loadBalancerClientFactory
-////				.getLazyProvider(name, ServiceInstanceListSupplier.class));
-////	}
+//	@Bean
+//	ReactorLoadBalancer<ServiceInstance> reactorLoadBalancer(Environment environment,
+//			LoadBalancerClientFactory loadBalancerClientFactory) {
+//		String name = environment.getProperty(LoadBalancerClientFactory.PROPERTY_NAME);
+//		return new TestRoundRobinLoadBalancer(name, loadBalancerClientFactory
+//				.getLazyProvider(name, ServiceInstanceListSupplier.class));
+//	}
 //
 //	@Bean
 //	public ServiceInstanceListSupplier serviceInstanceListSupplier(
@@ -43,5 +37,26 @@
 ////		}
 //		return firstDelegate;
 //	}
-//
-//}
+
+	@Bean
+	ServiceInstanceListSupplier serviceInstanceListSupplier(ConfigurableApplicationContext context, @Qualifier("webClient") WebClient.Builder webClientBuilder) {
+		return ServiceInstanceListSupplier
+				.builder()
+				.withDiscoveryClient()
+				.withHealthChecks(webClientBuilder.build())
+				.build(context);
+	}
+
+//	@Bean
+//	ServiceInstanceListSupplier serviceInstanceListSupplier(ConfigurableApplicationContext context) {
+//		return ServiceInstanceListSupplier
+//				.builder()
+//				.withDiscoveryClient()
+//				.withRetryAwareness(ServiceInstanceListSupplier.builder()
+//						.withDiscoveryClient()
+//						.withHints()
+//						.build(context))
+//				.build(context);
+//	}
+
+}

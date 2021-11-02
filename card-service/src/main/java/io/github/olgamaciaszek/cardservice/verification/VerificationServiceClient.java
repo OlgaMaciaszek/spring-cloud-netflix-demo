@@ -28,6 +28,7 @@ public class VerificationServiceClient {
 						.queryParam("cardCapacity", verificationApplication
 								.getCardCapacity())
 						.build())
+				.header("X-Test", "test")
 				.retrieve().bodyToMono(VerificationResult.class);
 	}
 }

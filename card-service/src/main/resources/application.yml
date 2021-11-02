@@ -3,17 +3,27 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
-      configurations: same-instance-preference
+#      clients:
+#        fraud-verifier:
+#          configurations: default
+#          retry:
+#            avoid-previous-instance: false
+#      configurations: health-check
       retry:
-        enabled: false
-        retryable-status-codes: 503
-        avoid-previous-instance: false
+        enabled: true
+        retryable-status-codes: 503,404
+        avoid-previous-instance: true
       ribbon:
         enabled: false
       zone: test
       sticky-session:
         add-service-instance-cookie: true
         instance-id-cookie-name:
+      hint:
+        default: test
+      hint-header-name: X-Test
+      health-check:
+        refetch-instances: true
 #      cache:
 #        ttl: 60m
 #        enabled: false
