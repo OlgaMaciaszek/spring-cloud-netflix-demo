@@ -3,13 +3,35 @@ spring:
     name: card-service
   cloud:
     loadbalancer:
+#      clients:
+#        fraud-verifier:
+#          configurations: default
+#          retry:
+#            avoid-previous-instance: false
+#      configurations: health-check
+      retry:
+        enabled: true
+        retryable-status-codes: 503,404
+        avoid-previous-instance: true
       ribbon:
         enabled: false
+      zone: test
       sticky-session:
         add-service-instance-cookie: true
+        instance-id-cookie-name:
+      hint:
+        default: test
+      hint-header-name: X-Test
+      health-check:
+        refetch-instances: true
+#      cache:
+#        ttl: 60m
+#        enabled: false
+#        caffeine:
+#          spec: maximumSize=200,expireAfterWrite=300s
 logging:
   level:
-    org.springframework: info
+    org.springframework: debug
 server:
   port: 9080
 management:
@@ -19,3 +41,12 @@ management:
         include:
           - metrics
           - prometheus
+          - health
+eureka:
+  instance:
+    metadata-map:
+      zone: zone1
+  client:
+    healthcheck:
+      enabled: true
+

@@ -1,5 +1,5 @@
 server:
-  port: 9081
+  port: 9981
 
 spring:
   application:
@@ -14,3 +14,9 @@ management:
         include:
           - metrics
           - prometheus
+          - health
+eureka:
+  instance:
+    metadata-map:
+      hint: test
+      zone: zone1

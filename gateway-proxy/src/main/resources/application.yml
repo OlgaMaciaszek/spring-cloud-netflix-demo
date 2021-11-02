@@ -21,9 +21,7 @@ spring:
         - Path=/ignored/test/allowed
         filters:
         - StripPrefix=1
-    loadbalancer:
-      ribbon:
-        enabled: false
+
 eureka:
   client:
     healthcheck:
@@ -37,7 +35,6 @@ management:
     web:
       exposure:
         include:
-          - hystrix.stream
           - metrics
           - prometheus
 #hystrix:
