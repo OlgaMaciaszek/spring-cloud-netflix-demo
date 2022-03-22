@@ -6,12 +6,10 @@ import java.util.UUID;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
-import io.github.resilience4j.micrometer.CircuitBreakerMetrics;
+import io.github.resilience4j.micrometer.tagged.TaggedCircuitBreakerMetrics;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -39,8 +37,6 @@ import static io.github.olgamaciaszek.userservice.VerificationResult.Status.VERI
 @SpringBootApplication
 public class UserServiceApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(UserServiceApplication.class);
-
 	public static void main(String[] args) {
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
@@ -62,7 +58,7 @@ public class UserServiceApplication {
 			// for metrics
 			factory.configureCircuitBreakerRegistry(circuitBreakerRegistry);
 			// we need to allow adding those customizers regardless of the id
-			factory.addCircuitBreakerCustomizer(circuitBreaker -> CircuitBreakerMetrics
+			factory.addCircuitBreakerCustomizer(circuitBreaker -> TaggedCircuitBreakerMetrics
 					.ofCircuitBreakerRegistry(circuitBreakerRegistry)
 					.bindTo(meterRegistry), "verifyNewUser");
 		};

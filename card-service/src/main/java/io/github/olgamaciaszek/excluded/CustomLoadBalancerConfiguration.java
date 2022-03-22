@@ -5,10 +5,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.ClientRequestContext;
 import org.springframework.cloud.client.loadbalancer.CompletionContext;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerLifecycle;
 import org.springframework.cloud.client.loadbalancer.Request;
+import org.springframework.cloud.client.loadbalancer.RequestDataContext;
+import org.springframework.cloud.client.loadbalancer.Response;
 import org.springframework.cloud.loadbalancer.core.ReactorLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
 import org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory;
@@ -36,24 +37,29 @@ public class CustomLoadBalancerConfiguration {
 
 }
 
-class TestLoadBalancerLifecycle implements LoadBalancerLifecycle<ClientRequestContext, ClientResponse, ServiceInstance> {
+class TestLoadBalancerLifecycle implements LoadBalancerLifecycle<RequestDataContext, ClientResponse, ServiceInstance> {
 
 	private static final Log LOG = LogFactory.getLog(TestLoadBalancerLifecycle.class);
 
 	@Override
 	public boolean supports(Class reqClass, Class responseClass, Class serverTypeClass) {
-		return ClientRequestContext.class.isAssignableFrom(reqClass)
+		return RequestDataContext.class.isAssignableFrom(reqClass)
 				&& ClientResponse.class.isAssignableFrom(responseClass)
 				&& ServiceInstance.class.isAssignableFrom(serverTypeClass);
 	}
 
 	@Override
-	public void onStart(Request<ClientRequestContext> request) {
+	public void onStart(Request<RequestDataContext> request) {
+
+	}
+
+	@Override
+	public void onStartRequest(Request<RequestDataContext> request, Response<ServiceInstance> lbResponse) {
 		LOG.error("REQUEST: " + request);
 	}
 
 	@Override
-	public void onComplete(CompletionContext<ClientResponse, ServiceInstance> completionContext) {
+	public void onComplete(CompletionContext<ClientResponse, ServiceInstance, RequestDataContext> completionContext) {
 		LOG.error("COMPLETION CONTEXT: " + completionContext);
 	}
 
