@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author Olga Maciaszek-Sharma
  */
-public class CustomLoadBalancerConfiguration {
+public class CustomDefaultLoadBalancerConfiguration {
 
 	@Bean
 	ReactorLoadBalancer<ServiceInstance> reactorLoadBalancer(Environment environment,
@@ -47,3 +47,4 @@ public class CustomLoadBalancerConfiguration {
 //	}
 
 }
+

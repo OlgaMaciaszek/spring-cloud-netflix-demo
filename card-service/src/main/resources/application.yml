@@ -2,6 +2,12 @@ spring:
   application:
     name: card-service
   cloud:
+#    discovery:
+#      client:
+#        simple:
+#          instances:
+#            #            gateway:
+#            #              - uri: http://localhost:9084
     loadbalancer:
 #      clients:
 #        fraud-verifier:
