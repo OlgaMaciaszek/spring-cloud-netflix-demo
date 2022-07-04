@@ -9,6 +9,10 @@ spring:
 #            #            gateway:
 #            #              - uri: http://localhost:9084
     loadbalancer:
+      eager-load:
+        clients:
+          - fraud-verifier
+          - proxy
 #      clients:
 #        fraud-verifier:
 #          configurations: default

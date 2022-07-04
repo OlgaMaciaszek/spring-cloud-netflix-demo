@@ -15,6 +15,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerEagerLoadProperties;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientConfiguration;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
@@ -36,7 +37,12 @@ public class CardServiceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Map<String, List<Class<?>>> contexts = context.getBeansWithAnnotation(SpringBootApplication.class)
+		Map<String, List<Class<?>>> contexts =
+				context.getBean(LoadBalancerEagerLoadProperties.class)
+						.getClients().stream()
+						.collect(Collectors.toMap(contextId -> contextId, contextId -> Collections.singletonList(LoadBalancerClientConfiguration.class)));
+		// Override property-based mappings with annotation-based mappings if present
+		Map<String, List<Class<?>>> contextsFromAnnotations = context.getBeansWithAnnotation(SpringBootApplication.class)
 				.values().stream()
 				.map(candidate -> candidate.getClass().getPackage().getName())
 				.map(this::getContextsForPackage)
@@ -44,6 +50,7 @@ public class CardServiceApplication implements CommandLineRunner {
 					baseMap.putAll(newMap);
 					return baseMap;
 				}).orElse(new HashMap<>());
+		contexts.putAll(contextsFromAnnotations);
 		for (Map.Entry<String, List<Class<?>>> entry : contexts.entrySet()) {
 			System.out.println(entry.getKey() + ": " + Arrays.toString(entry.getValue()
 					.toArray()));
