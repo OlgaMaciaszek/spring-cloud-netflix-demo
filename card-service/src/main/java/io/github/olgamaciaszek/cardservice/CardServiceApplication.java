@@ -1,5 +1,6 @@
 package io.github.olgamaciaszek.cardservice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,12 +13,16 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.config.ConstructorArgumentValues;
+import org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerEagerLoadProperties;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientConfiguration;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
@@ -37,6 +42,17 @@ public class CardServiceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
+		String[] beanNames = context.getBeanNamesForType(LoadBalancerClientSpecification.class);
+		List<Entry> contexts2 = new ArrayList<>();
+		for (String beanName : beanNames) {
+			contexts2.add(process(beanFactory.getMergedBeanDefinition(beanName)));
+		}
+		for (Entry entry : contexts2) {
+			System.out.println(entry.name() + ": " + Arrays.toString(entry.configurations));
+		}
+		System.out.println("-----------------");
+
 		Map<String, List<Class<?>>> contexts =
 				context.getBean(LoadBalancerEagerLoadProperties.class)
 						.getClients().stream()
@@ -56,6 +72,21 @@ public class CardServiceApplication implements CommandLineRunner {
 					.toArray()));
 		}
 	}
+
+	private Entry process(BeanDefinition beanDefinition) {
+		ConstructorArgumentValues constructorArguments = beanDefinition.getConstructorArgumentValues();
+		ValueHolder nameValueHolder = constructorArguments.getIndexedArgumentValue(0, null);
+		if (nameValueHolder != null) {
+			String name = (String) nameValueHolder.getValue();
+			ValueHolder configurationsValueHolder = constructorArguments.getIndexedArgumentValue(1, null);
+			if (configurationsValueHolder != null) {
+				String[] configurations = (String[]) configurationsValueHolder.getValue();
+				return new Entry(name, configurations);
+			}
+		}
+		throw new IllegalArgumentException("Invalid bean definition " + beanDefinition);
+	}
+
 
 	private Map<String, List<Class<?>>> getContextsForPackage(String rootPackage) {
 		Map<String, List<Class<?>>> contexts = new HashMap<>();
@@ -111,6 +142,10 @@ public class CardServiceApplication implements CommandLineRunner {
 		List<Class<?>> contextConfig = configClasses.size() > 0 ? configClasses :
 				(defaultConfigClasses.size() > 0 ? defaultConfigClasses : Collections.singletonList(LoadBalancerClientConfiguration.class));
 		return Map.entry(contextId, contextConfig);
+	}
+
+	record Entry(String name, String[] configurations) {
+
 	}
 
 }

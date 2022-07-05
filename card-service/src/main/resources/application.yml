@@ -39,9 +39,6 @@ spring:
 #        enabled: false
 #        caffeine:
 #          spec: maximumSize=200,expireAfterWrite=300s
-logging:
-  level:
-    org.springframework: debug
 server:
   port: 9080
 management:
