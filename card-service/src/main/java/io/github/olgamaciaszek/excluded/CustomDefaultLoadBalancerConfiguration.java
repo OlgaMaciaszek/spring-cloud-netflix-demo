@@ -18,21 +18,21 @@ import org.springframework.web.client.RestTemplate;
 public class CustomDefaultLoadBalancerConfiguration {
 
 	@Bean
-	ReactorLoadBalancer<ServiceInstance> reactorLoadBalancer(Environment environment,
+	public ReactorLoadBalancer<ServiceInstance> reactorLoadBalancer(Environment environment,
 			LoadBalancerClientFactory loadBalancerClientFactory) {
 		String name = environment.getProperty(LoadBalancerClientFactory.PROPERTY_NAME);
 		return new TestRoundRobinLoadBalancer(loadBalancerClientFactory
 				.getLazyProvider(name, ServiceInstanceListSupplier.class), name);
 	}
 
-	@Bean
-	ServiceInstanceListSupplier serviceInstanceListSupplier(ConfigurableApplicationContext context, @Qualifier("restTemplate") RestTemplate restTemplate) {
-		return ServiceInstanceListSupplier
-				.builder()
-				.withBlockingDiscoveryClient()
-				.withBlockingHealthChecks(restTemplate)
-				.build(context);
-	}
+//	@Bean
+//	ServiceInstanceListSupplier serviceInstanceListSupplier(ConfigurableApplicationContext context, @Qualifier("restTemplate") RestTemplate restTemplate) {
+//		return ServiceInstanceListSupplier
+//				.builder()
+//				.withBlockingDiscoveryClient()
+//				.withBlockingHealthChecks(restTemplate)
+//				.build(context);
+//	}
 
 //	@Bean
 //	ServiceInstanceListSupplier serviceInstanceListSupplier(ConfigurableApplicationContext context) {

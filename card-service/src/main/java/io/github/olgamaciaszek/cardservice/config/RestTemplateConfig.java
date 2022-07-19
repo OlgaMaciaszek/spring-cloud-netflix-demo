@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * @author Olga Maciaszek-Sharma
  */
 @Configuration
-@LoadBalancerClients(value = {@LoadBalancerClient(value = "fraud-verifier", configuration = { CustomLoadBalancerConfiguration.class, CustomDefaultLoadBalancerConfiguration.class}),
+@LoadBalancerClients(value = {@LoadBalancerClient(value = "fraud-verifier"),
 		@LoadBalancerClient(value = "test", configuration = CustomLoadBalancerConfiguration.class)}, defaultConfiguration = CustomDefaultLoadBalancerConfiguration.class)
 public class RestTemplateConfig {
 

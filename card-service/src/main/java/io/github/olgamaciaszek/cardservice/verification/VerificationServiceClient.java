@@ -1,6 +1,7 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -16,9 +17,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class VerificationServiceClient {
 
 	private final RestTemplate restTemplate;
+	private final ApplicationContext applicationContext;
 
-	VerificationServiceClient(@Qualifier("loadBalancedRestTemplate") RestTemplate restTemplate) {
+	VerificationServiceClient(@Qualifier("loadBalancedRestTemplate") RestTemplate restTemplate, ApplicationContext applicationContext) {
 		this.restTemplate = restTemplate;
+		this.applicationContext = applicationContext;
 	}
 
 	public ResponseEntity<VerificationResult> verify(VerificationApplication verificationApplication) {
