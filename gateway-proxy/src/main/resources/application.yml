@@ -4,6 +4,7 @@ spring:
   application:
     name: proxy
   cloud:
+    zookeeper:
     gateway:
       routes:
       - id: fraud
