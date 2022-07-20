@@ -31,20 +31,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--&lt;!&ndash;			<exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;				<exclusion>&ndash;&gt;-->
-<!--&lt;!&ndash;					<groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;					<artifactId>spring-cloud-starter-ribbon</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;				</exclusion>&ndash;&gt;-->
-<!--&lt;!&ndash;				<exclusion>&ndash;&gt;-->
-<!--&lt;!&ndash;					<groupId>com.netflix.ribbon</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;					<artifactId>ribbon-eureka</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;				</exclusion>&ndash;&gt;-->
-<!--&lt;!&ndash;			</exclusions>&ndash;&gt;-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
@@ -61,6 +51,10 @@
 		<dependency>
 			<groupId>org.springframework.retry</groupId>
 			<artifactId>spring-retry</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
 		</dependency>
 
 		<dependency>

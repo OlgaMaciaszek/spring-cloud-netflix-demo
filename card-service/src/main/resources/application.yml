@@ -2,16 +2,6 @@ spring:
   application:
     name: card-service
   cloud:
-    discovery:
-      client:
-        simple:
-          instances:
-            proxy:
-              - uri: http://localhost:9083
-            fraud-verifier:
-              - uri: http://localhost:9981
-            user-service:
-              - uri: http://localhost:9082
     loadbalancer:
       eager-load:
         clients:
@@ -23,12 +13,6 @@ spring:
       #          retry:
       #            avoid-previous-instance: false
 #      configurations: health-check
-      retry:
-        enabled: true
-        retryable-status-codes: 503,404
-        avoid-previous-instance: true
-      ribbon:
-        enabled: false
       zone: test
       sticky-session:
         add-service-instance-cookie: true
@@ -58,11 +42,4 @@ management:
           - health
   server:
     port: 8888
-eureka:
-  instance:
-    metadata-map:
-      zone: zone1
-  client:
-    healthcheck:
-      enabled: true
 
