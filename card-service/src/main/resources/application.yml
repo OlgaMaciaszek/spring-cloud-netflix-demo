@@ -56,8 +56,8 @@ management:
           - metrics
           - prometheus
           - health
-  server:
-    port: 8888
+#  server:
+#    port: 8888
 eureka:
   instance:
     metadata-map:

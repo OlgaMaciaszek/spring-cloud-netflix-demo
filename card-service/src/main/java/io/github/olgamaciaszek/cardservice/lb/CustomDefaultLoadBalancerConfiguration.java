@@ -1,4 +1,4 @@
-package io.github.olgamaciaszek.excluded;
+package io.github.olgamaciaszek.cardservice.lb;
 
 import io.github.olgamaciaszek.cardservice.config.TestRoundRobinLoadBalancer;
 

@@ -1,6 +1,6 @@
 //package io.github.olgamaciaszek.cardservice.config;
 //
-//import io.github.olgamaciaszek.excluded.CustomLoadBalancerConfiguration;
+//import io.github.olgamaciaszek.cardservice.lb.CustomLoadBalancerConfiguration;
 //
 //import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 //import org.springframework.context.annotation.Configuration;
