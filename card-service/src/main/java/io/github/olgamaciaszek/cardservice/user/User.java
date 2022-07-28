@@ -2,22 +2,30 @@ package io.github.olgamaciaszek.cardservice.user;
 
 import java.util.UUID;
 
+import org.springframework.aot.hint.MemberCategory;
+import org.springframework.aot.hint.RuntimeHints;
+import org.springframework.aot.hint.RuntimeHintsRegistrar;
+import org.springframework.aot.hint.TypeReference;
+
 /**
  * @author Olga Maciaszek-Sharma
  */
 public class User {
 
-	private UUID uuid;
+	public UUID uuid;
 
-	private Status status;
-
-	User(UUID uuid, Status status) {
-		this.uuid = uuid;
-		this.status = status;
-	}
+	public Status status;
 
 	public User() {
 
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 
 	public UUID getUuid() {
@@ -29,8 +37,22 @@ public class User {
 	}
 
 	public enum Status {
+
 		NEW,
 		OK,
-		FRAUD
+		FRAUD;
+
+		Status() {
+		}
+	}
+}
+
+class UserRuntimeHints implements RuntimeHintsRegistrar {
+
+	@Override
+	public void registerHints(RuntimeHints hints, ClassLoader classLoader) {
+		hints.reflection().registerType(TypeReference.of(User.class),
+				hint -> hint.withMembers(MemberCategory.INVOKE_DECLARED_CONSTRUCTORS,
+						MemberCategory.DECLARED_FIELDS));
 	}
 }

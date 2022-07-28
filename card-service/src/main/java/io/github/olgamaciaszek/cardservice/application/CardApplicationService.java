@@ -7,6 +7,8 @@ import io.github.olgamaciaszek.cardservice.user.UserServiceClient;
 import io.github.olgamaciaszek.cardservice.verification.VerificationApplication;
 import io.github.olgamaciaszek.cardservice.verification.VerificationResult;
 import io.github.olgamaciaszek.cardservice.verification.VerificationServiceClient;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
 @Service
 class CardApplicationService {
 
+	private static final Log LOG = LogFactory.getLog(CardApplicationService.class);
 	private final UserServiceClient userServiceClient;
 	private final VerificationServiceClient verificationServiceClient;
 
@@ -27,6 +30,7 @@ class CardApplicationService {
 
 	public CardApplication registerApplication(CardApplicationDto applicationDTO) {
 		User user = userServiceClient.registerUser(applicationDTO.user).getBody();
+		LOG.debug("Registered user: " + user);
 		CardApplication application = new CardApplication(UUID.randomUUID(),
 				user, applicationDTO.cardCapacity);
 		if (User.Status.OK != user.getStatus()) {

@@ -8,13 +8,27 @@ import java.time.LocalDate;
  */
 public class CardApplicationDto {
 
-	public User user;
+	public CardApplicationDto() {
+	}
+
+	public UserDto user;
 	public BigDecimal cardCapacity;
 
-	public static class User {
-		public String name;
-		public String surname;
-		public String idNo;
-		public LocalDate dateOfBirth;
+	public UserDto getUser() {
+		return user;
+	}
+
+	public void setUser(UserDto user) {
+		this.user = user;
+	}
+
+	public BigDecimal getCardCapacity() {
+		return cardCapacity;
+	}
+
+	public void setCardCapacity(BigDecimal cardCapacity) {
+		this.cardCapacity = cardCapacity;
 	}
 }
+
+

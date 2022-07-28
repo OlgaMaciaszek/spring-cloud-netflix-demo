@@ -46,6 +46,7 @@ spring:
 logging:
   level:
     org.springframework: debug
+    io.github.olgamaciaszek: debug
 server:
   port: 9080
 management:
@@ -56,13 +57,13 @@ management:
           - metrics
           - prometheus
           - health
-#  server:
-#    port: 8888
-eureka:
-  instance:
-    metadata-map:
-      zone: zone1
-  client:
-    healthcheck:
-      enabled: true
+  server:
+    port: 8888
+#eureka:
+#  instance:
+#    metadata-map:
+#      zone: zone1
+#  client:
+#    healthcheck:
+#      enabled: true
 
