@@ -1,6 +1,6 @@
 package io.github.olgamaciaszek.cardservice.user;
 
-import io.github.olgamaciaszek.cardservice.application.CardApplicationDto;
+import io.github.olgamaciaszek.cardservice.application.UserDto;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
@@ -24,7 +24,7 @@ public class UserServiceClient {
 		this.discoveryClient = discoveryClient;
 	}
 
-	public ResponseEntity<User> registerUser(CardApplicationDto.User userDto) {
+	public ResponseEntity<User> registerUser(UserDto userDto) {
 		ServiceInstance instance = discoveryClient.getInstances("proxy")
 				.stream().findAny()
 				.orElseThrow(() -> new IllegalStateException("Proxy unavailable"));
