@@ -3,6 +3,7 @@ package io.github.olgamaciaszek.cardservice.application;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import io.github.olgamaciaszek.cardservice.user.Status;
 import io.github.olgamaciaszek.cardservice.user.User;
 
 /**
@@ -18,7 +19,7 @@ class CardApplication {
 	CardApplication(UUID uuid, User user, BigDecimal cardCapacity) {
 		this.uuid = uuid;
 		this.user = user;
-		if (!User.Status.OK.equals(user.getStatus())) {
+		if (!Status.OK.equals(user.getStatus())) {
 			applicationResult = ApplicationResult.rejected();
 		}
 		this.cardCapacity = cardCapacity;

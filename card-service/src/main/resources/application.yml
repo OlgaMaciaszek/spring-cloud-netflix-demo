@@ -30,6 +30,7 @@ spring:
 logging:
   level:
     org.springframework: debug
+    io.github.olgamaciaszek: debug
 server:
   port: 9080
 management:

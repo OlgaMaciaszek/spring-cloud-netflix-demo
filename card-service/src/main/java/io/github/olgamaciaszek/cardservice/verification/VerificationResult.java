@@ -2,6 +2,11 @@ package io.github.olgamaciaszek.cardservice.verification;
 
 import java.util.UUID;
 
+import org.springframework.aot.hint.MemberCategory;
+import org.springframework.aot.hint.RuntimeHints;
+import org.springframework.aot.hint.RuntimeHintsRegistrar;
+import org.springframework.aot.hint.TypeReference;
+
 /**
  * @author Olga Maciaszek-Sharma
  */
@@ -38,5 +43,14 @@ public class VerificationResult {
 	public enum Status {
 		VERIFICATION_PASSED,
 		VERIFICATION_FAILED
+	}
+}
+
+class VerificationResultHints implements RuntimeHintsRegistrar {
+
+	@Override
+	public void registerHints(RuntimeHints hints, ClassLoader classLoader) {
+		hints.reflection().registerType(TypeReference.of(VerificationResult.class),
+				hint -> hint.withMembers(MemberCategory.DECLARED_FIELDS, MemberCategory.INVOKE_DECLARED_CONSTRUCTORS));
 	}
 }
