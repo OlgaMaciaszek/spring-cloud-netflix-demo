@@ -1,0 +1,62 @@
+[
+  {
+    "directory": "org.example/library",
+    "module": "org.example:library"
+  },
+  {
+    "directory": "org.jline/jline",
+    "module": "org.jline:jline"
+  },
+  {
+    "module": "org.jline:jline-terminal",
+    "requires": [
+      "org.jline:jline"
+    ]
+  },
+  {
+    "module": "org.jline:jline-console",
+    "requires": [
+      "org.jline:jline"
+    ]
+  },
+  {
+    "directory": "com.h2database/h2",
+    "module": "com.h2database:h2"
+  },
+  {
+    "directory": "org.hdrhistogram/HdrHistogram",
+    "module": "org.hdrhistogram:HdrHistogram"
+  },
+  {
+    "directory": "org.hibernate.validator/hibernate-validator",
+    "module": "org.hibernate.validator:hibernate-validator"
+  },
+  {
+    "directory": "org.apache.tomcat.embed/tomcat-embed-core",
+    "module": "org.apache.tomcat.embed:tomcat-embed-core"
+  },
+  {
+    "directory": "io.netty/netty-transport",
+    "module": "io.netty:netty-transport"
+  },
+  {
+    "directory": "mysql/mysql-connector-java",
+    "module": "mysql:mysql-connector-java"
+  },
+  {
+    "directory": "org.postgresql/postgresql",
+    "module": "org.postgresql:postgresql"
+  },
+  {
+    "directory": "org.apache.commons/commons-pool2",
+    "module": "org.apache.commons:commons-pool2"
+  },
+  {
+    "directory": "ch.qos.logback/logback-classic",
+    "module": "ch.qos.logback:logback-classic"
+  },
+  {
+    "directory": "com.zaxxer/HikariCP",
+    "module": "com.zaxxer:HikariCP"
+  }
+]
