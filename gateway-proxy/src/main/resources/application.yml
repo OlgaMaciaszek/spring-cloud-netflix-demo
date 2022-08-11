@@ -12,20 +12,12 @@ spring:
         - Path=/fraud-verifier/**
         filters:
         - StripPrefix=1
-        - name: Retry
-          args:
-            retries: 3
       - id: ignored
         uri: lb://ignored
         predicates:
         - Path=/ignored/test/allowed
         filters:
         - StripPrefix=1
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 logging:
   level:
     org.springframework: debug
@@ -37,8 +29,3 @@ management:
         include:
           - metrics
           - prometheus
-#hystrix:
-#  command:
-#    default:
-#      circuitBreaker:
-#        enabled: false

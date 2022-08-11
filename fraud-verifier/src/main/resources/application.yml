@@ -15,8 +15,3 @@ management:
           - metrics
           - prometheus
           - health
-eureka:
-  instance:
-    metadata-map:
-      hint: test
-      zone: zone1
