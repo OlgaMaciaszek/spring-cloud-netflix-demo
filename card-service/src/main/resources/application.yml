@@ -12,11 +12,14 @@ spring:
               - uri: http://localhost:9981
             user-service:
               - uri: http://localhost:9082
+            ignored:
+              - uri: http://localhost:9084
     loadbalancer:
       eager-load:
         clients:
           - fraud-verifier
           - proxy
+          - ignored
       #      clients:
       #        fraud-verifier:
       #          configurations: default

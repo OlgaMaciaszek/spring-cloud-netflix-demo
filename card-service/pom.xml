@@ -29,7 +29,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.cloud</groupId>-->
@@ -57,11 +57,6 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.retry</groupId>
-			<artifactId>spring-retry</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -197,7 +192,7 @@
 							<metadataRepository>
 								<enabled>true</enabled>
 							</metadataRepository>
-							<buildArgs>--enable-http --enable-https --enable-url-protocols=http</buildArgs>
+							<buildArgs>--enable-http --enable-https --enable-url-protocols=http --initialize-at-run-time=io.netty</buildArgs>
 						</configuration>
 						<executions>
 							<execution>

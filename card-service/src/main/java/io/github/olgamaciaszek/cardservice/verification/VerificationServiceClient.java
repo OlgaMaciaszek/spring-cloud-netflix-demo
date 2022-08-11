@@ -1,14 +1,10 @@
 package io.github.olgamaciaszek.cardservice.verification;
 
+import reactor.core.publisher.Mono;
+
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.reactive.function.client.WebClient;
 
 /**
  * @author Olga Maciaszek-Sharma
@@ -16,25 +12,21 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Component
 public class VerificationServiceClient {
 
-	private final RestTemplate restTemplate;
-	private final ApplicationContext applicationContext;
+	private final WebClient.Builder webClientBuilder;
 
-	VerificationServiceClient(@Qualifier("loadBalancedRestTemplate") RestTemplate restTemplate, ApplicationContext applicationContext) {
-		this.restTemplate = restTemplate;
-		this.applicationContext = applicationContext;
+	VerificationServiceClient(@Qualifier("loadBalancedWebClient") WebClient.Builder webClientBuilder) {
+		this.webClientBuilder = webClientBuilder;
 	}
 
-	public ResponseEntity<VerificationResult> verify(VerificationApplication verificationApplication) {
-		UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
-				.fromHttpUrl("http://fraud-verifier/cards/verify")
-				.queryParam("uuid", verificationApplication.getUserId())
-				.queryParam("cardCapacity", verificationApplication.getCardCapacity());
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(HttpHeaders.COOKIE, "test=testCookie");
-		HttpEntity request = new HttpEntity(headers);
-		return restTemplate.exchange(uriComponentsBuilder.toUriString(), HttpMethod.GET,
-				request, VerificationResult.class);
-//		return restTemplate.getForEntity(uriComponentsBuilder.toUriString(),
-//				VerificationResult.class);
+	public Mono<VerificationResult> verify(VerificationApplication verificationApplication) {
+		return webClientBuilder.build().get()
+				.uri(uriBuilder -> uriBuilder
+						.scheme("http")
+						.host("fraud-verifier").path("/cards/verify")
+						.queryParam("uuid", verificationApplication.getUserId())
+						.queryParam("cardCapacity", verificationApplication
+								.getCardCapacity())
+						.build())
+				.retrieve().bodyToMono(VerificationResult.class);
 	}
 }
