@@ -21,7 +21,7 @@ public class TestFactoryPostProcessor implements ApplicationListener<Application
 	@Override
 	public void onApplicationEvent(ApplicationPreparedEvent event) {
 		GenericApplicationContext context = (GenericApplicationContext) event.getApplicationContext();
-		context.refreshForAotProcessing();
+//		context.refreshForAotProcessing();
 
 
 		System.out.println("test");
